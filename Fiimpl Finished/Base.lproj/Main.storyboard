@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -65,13 +65,13 @@
                                         <rect key="frame" x="0.0" y="28.5" width="272" height="28.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Longest streak :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K98-Wj-FjP">
-                                                <rect key="frame" x="0.0" y="0.0" width="166" height="28.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="28.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZP-T1-T6A">
-                                                <rect key="frame" x="166" y="0.0" width="58" height="28.5"/>
+                                                <rect key="frame" x="182.5" y="0.0" width="41.5" height="28.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -92,11 +92,19 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="33c-tw-elx" userLabel="row1 images">
                                         <rect key="frame" x="0.0" y="0.0" width="272" height="31.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setupSession" translatesAutoresizingMaskIntoConstraints="NO" id="ZBW-qV-jA3">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setupSession" translatesAutoresizingMaskIntoConstraints="NO" id="ZBW-qV-jA3">
                                                 <rect key="frame" x="0.0" y="0.0" width="130.5" height="31.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="lJ6-I8-czl" appends="YES" id="QPG-Nr-eJ2"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exerciseBank" translatesAutoresizingMaskIntoConstraints="NO" id="BGv-wx-IJk">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exerciseBank" translatesAutoresizingMaskIntoConstraints="NO" id="BGv-wx-IJk">
                                                 <rect key="frame" x="130.5" y="0.0" width="141.5" height="31.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="I4G-Kf-NGA" appends="YES" id="7sT-of-1b2"/>
+                                                </connections>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -109,6 +117,9 @@
                                                 <state key="normal" title="Workout">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="x47-Ea-2rl" kind="show" id="hpo-oi-tL1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoU-cK-XD8">
                                                 <rect key="frame" x="141" y="0.0" width="131" height="31"/>
@@ -116,6 +127,9 @@
                                                 <state key="normal" title="Exercise bank">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="CF0-fm-31J" kind="show" id="TZV-HO-C3D"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -123,11 +137,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4K5-9L-Yob" userLabel="row 2 images">
                                         <rect key="frame" x="0.0" y="92.5" width="272" height="31.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="savedWorkouts" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-JF-syG">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="savedWorkouts" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-JF-syG">
                                                 <rect key="frame" x="0.0" y="0.0" width="134.5" height="31.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Kal-mI-WVa" appends="YES" id="g4F-KO-9E3"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notebook" translatesAutoresizingMaskIntoConstraints="NO" id="JuR-Bz-7K2">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notebook" translatesAutoresizingMaskIntoConstraints="NO" id="JuR-Bz-7K2">
                                                 <rect key="frame" x="144.5" y="0.0" width="127.5" height="31.5"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="gRs-VM-9o9" appends="YES" id="BEL-sS-aa6"/>
+                                                </connections>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -140,6 +162,9 @@
                                                 <state key="normal" title="Favourites">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="i3S-At-diy" kind="show" id="Vit-ZV-vLg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctl-ru-wF0">
                                                 <rect key="frame" x="141" y="0.0" width="131" height="31"/>
@@ -147,6 +172,9 @@
                                                 <state key="normal" title="Notebook">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="x60-K8-fIc" kind="show" id="GNq-9c-oAW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -195,10 +223,31 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="yRA-nP-uGP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="I4G-Kf-NGA" userLabel="Exercise Bank Gesture Recognizer">
+                    <connections>
+                        <segue destination="CF0-fm-31J" kind="show" id="vEA-5L-fGv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Kal-mI-WVa" userLabel="Favourites Gesture Recognizer">
+                    <connections>
+                        <segue destination="i3S-At-diy" kind="show" id="ADT-ng-dZD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gRs-VM-9o9" userLabel="Notebook Gesture Recognizer">
+                    <connections>
+                        <segue destination="x60-K8-fIc" kind="show" id="Ewi-xl-6sC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lJ6-I8-czl" userLabel="Workout Gesture Recognizer">
+                    <connections>
+                        <segue destination="x47-Ea-2rl" kind="show" id="W60-tI-uRl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+            <point key="canvasLocation" x="513.75" y="117.25352112676056"/>
         </scene>
         <!--View Exercise Bank-->
         <scene sceneID="c0G-as-evn">
@@ -227,6 +276,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="m6Z-p6-kXI" firstAttribute="trailing" secondItem="ReC-I1-8t1" secondAttribute="trailing" id="3oU-cF-hTI"/>
                             <constraint firstItem="1rT-VW-xU5" firstAttribute="centerX" secondItem="Uer-hj-pZF" secondAttribute="centerX" id="7jb-T3-RQv"/>
@@ -238,11 +288,19 @@
                             <constraint firstItem="m6Z-p6-kXI" firstAttribute="bottom" secondItem="ReC-I1-8t1" secondAttribute="bottom" id="xeU-9G-uhU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ReC-I1-8t1"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rUa-3E-ek8" appends="YES" id="6Wa-g8-iNF"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zV7-vj-bFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="rUa-3E-ek8">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="HOy-Kr-LMB"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="801" y="-234"/>
+            <point key="canvasLocation" x="1198.125" y="-234.50704225352112"/>
         </scene>
         <!--Workout Summary-->
         <scene sceneID="DNv-GV-KXz">
@@ -493,7 +551,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYl-Rq-nR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="578"/>
+            <point key="canvasLocation" x="1198.125" y="577.81690140845069"/>
         </scene>
         <!--Setup Workout-->
         <scene sceneID="HTj-3A-jQG">
@@ -708,7 +766,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXO-ft-5Kp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1515" y="-235"/>
+            <point key="canvasLocation" x="1912.5" y="-235.56338028169014"/>
         </scene>
         <!--Setup Favourite-->
         <scene sceneID="zml-Bm-RGf">
@@ -831,4 +889,10 @@
         <image name="setupSession" width="92" height="46"/>
         <image name="timerPlay" width="168" height="168"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hpo-oi-tL1"/>
+        <segue reference="Ewi-xl-6sC"/>
+        <segue reference="ADT-ng-dZD"/>
+        <segue reference="vEA-5L-fGv"/>
+    </inferredMetricsTieBreakers>
 </document>
