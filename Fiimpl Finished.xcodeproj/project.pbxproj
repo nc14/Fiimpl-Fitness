@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39053AC061F90E92F65E1BB0 /* Pods_Fiimpl_Finished.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852C9194EA08529698E1B6E0 /* Pods_Fiimpl_Finished.framework */; };
 		D965F7D220C9BF7C0063A09A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965F7D120C9BF7C0063A09A /* AppDelegate.swift */; };
 		D965F7D420C9BF7C0063A09A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965F7D320C9BF7C0063A09A /* ViewController.swift */; };
 		D965F7D720C9BF7C0063A09A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965F7D520C9BF7C0063A09A /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70EF25481F4F2D99FB9556D3 /* Pods-Fiimpl Finished.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fiimpl Finished.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fiimpl Finished/Pods-Fiimpl Finished.debug.xcconfig"; sourceTree = "<group>"; };
+		8250D5275F699554B7D521F0 /* Pods-Fiimpl Finished.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fiimpl Finished.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fiimpl Finished/Pods-Fiimpl Finished.release.xcconfig"; sourceTree = "<group>"; };
+		852C9194EA08529698E1B6E0 /* Pods_Fiimpl_Finished.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fiimpl_Finished.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D965F7CE20C9BF7C0063A09A /* Fiimpl Finished.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fiimpl Finished.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D965F7D120C9BF7C0063A09A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D965F7D320C9BF7C0063A09A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39053AC061F90E92F65E1BB0 /* Pods_Fiimpl_Finished.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7E4FC63D088E1FC43CA7EAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				852C9194EA08529698E1B6E0 /* Pods_Fiimpl_Finished.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D965F7C520C9BF7C0063A09A = {
 			isa = PBXGroup;
 			children = (
 				D965F7D020C9BF7C0063A09A /* Fiimpl Finished */,
 				D965F7CF20C9BF7C0063A09A /* Products */,
+				F016F3004B5362E9F73E57EC /* Pods */,
+				D7E4FC63D088E1FC43CA7EAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +98,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F016F3004B5362E9F73E57EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70EF25481F4F2D99FB9556D3 /* Pods-Fiimpl Finished.debug.xcconfig */,
+				8250D5275F699554B7D521F0 /* Pods-Fiimpl Finished.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D965F7E020C9BF7C0063A09A /* Build configuration list for PBXNativeTarget "Fiimpl Finished" */;
 			buildPhases = (
+				DAA2352C6D54983D432CB07F /* [CP] Check Pods Manifest.lock */,
 				D965F7CA20C9BF7C0063A09A /* Sources */,
 				D965F7CB20C9BF7C0063A09A /* Frameworks */,
 				D965F7CC20C9BF7C0063A09A /* Resources */,
+				38057E308D5832C0CA39F9B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +175,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38057E308D5832C0CA39F9B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fiimpl Finished/Pods-Fiimpl Finished-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fiimpl Finished/Pods-Fiimpl Finished-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAA2352C6D54983D432CB07F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fiimpl Finished-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D965F7CA20C9BF7C0063A09A /* Sources */ = {
@@ -292,6 +359,7 @@
 		};
 		D965F7E120C9BF7C0063A09A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70EF25481F4F2D99FB9556D3 /* Pods-Fiimpl Finished.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +375,7 @@
 		};
 		D965F7E220C9BF7C0063A09A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8250D5275F699554B7D521F0 /* Pods-Fiimpl Finished.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
