@@ -37,6 +37,7 @@ class ExerciseGeneratorObject: Object {
     @objc dynamic var name = ""
     @objc dynamic var minReps = 0
     @objc dynamic var maxReps = 0
+    @objc dynamic var type = ""
     
     override class func primaryKey() -> String? {
         return "name"
