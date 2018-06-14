@@ -151,15 +151,20 @@ class WorkoutExercise: Object {
 class WorkoutSessionObject: Object {
     @objc dynamic var workoutID = UUID().uuidString
     @objc dynamic var workoutType = ""
-    @objc dynamic var workoutName = ""
     let exercises = List<WorkoutExercise>()
     @objc dynamic var totalExerciseCount = 0
     @objc dynamic var rounds = 0
     @objc dynamic var favourite : Bool = false
     
     override class func primaryKey() -> String? {
-        return "workoutName"
+        return "workoutID"
     }
+}
+
+class FavouriteObject: Object {
+    @objc dynamic var favouriteWorkoutName = ""
+    @objc dynamic var workoutReference = WorkoutSessionObject.primaryKey()
+    
 }
 
 

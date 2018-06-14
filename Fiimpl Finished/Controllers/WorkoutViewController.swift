@@ -82,6 +82,36 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
 //MARK: Timer functions
+    
+    @IBAction func timerControlTapped(_ sender: UIButton) {
+        
+        if isTimerRunning == false {
+            sender.setImage(#imageLiteral(resourceName: "timerPlay"), for: UIControlState.normal)
+            runTimer()
+            isTimerRunning = true
+            swapButtonEnabled = false
+            workoutTableView.reloadData()
+            
+        } else {
+            sender.setImage(#imageLiteral(resourceName: "timerPause"), for: UIControlState.normal)
+            workoutTimerObject.invalidate()
+            isTimerRunning = false
+        }
+    }
+    
+    @IBAction func addRoundTapped(_ sender: Any) {
+        
+        rounds = rounds + 1
+        roundsLabel.text = String(rounds)
+        
+    }
+    
+//run timer function
+    func runTimer() {
+    workoutTimerObject = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(WorkoutViewController.workoutTimer), userInfo: nil, repeats: true)
+        
+    isTimerRunning = true
+    }
 
 //function to convert workout time to a decent format
     func timeString(time:TimeInterval) -> String {
@@ -96,8 +126,8 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     let alert = UIAlertController(title: "Workout Done", message: "Save and go to summary", preferredStyle: .alert)
     let saveWorkoutAction = UIAlertAction(title: "Save", style: .default) { (UIAlertAction) in
         self.saveToRealm()
-        self.updateStreak()
-        self.performSegue(withIdentifier: "goToSummary", sender: self)
+//        self.updateStreak()
+        self.performSegue(withIdentifier: "goToWorkoutSummary", sender: self)
     }
     selectedWorkoutTime = selectedWorkoutTime - 1
     timeLabel.text = timeString(time: TimeInterval(selectedWorkoutTime))
@@ -141,9 +171,9 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         let currentStreak = streakObject?.currentStreak ?? 0
         let bestStreak = streakObject?.longestStreak
         let newStreak = (currentStreak) + 1
-        let lastDate = streakObject?.lastWorkoutDate
+        let lastDate = streakObject?.lastWorkoutDate ?? Date()
         // Replace the hour (time) of both dates with 00:00
-        let date1 = calendar.startOfDay(for: lastDate!)
+        let date1 = calendar.startOfDay(for: lastDate)
         let date2 = calendar.startOfDay(for: Date())
         
         let daysBetween = calendar.dateComponents([.day], from: date1, to: date2)

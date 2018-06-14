@@ -25,11 +25,6 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         
-        print (totalRounds)
-        print (workoutID)
-        print (workoutExercises)
-        print (exerciseCount)
-        
         super.viewDidLoad()
 
     }
@@ -53,6 +48,27 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
         cell.exerciseName.text = exercises.name
         cell.totalReps.text = String(exercises.reps)
         return cell
+    }
+    
+    @IBAction func favouriteButtonTapped(_ sender: Any) {
+        
+    let alertController : UIAlertController = UIAlertController(title: "Save as favourite", message: "Give your workout a name to save it", preferredStyle: .alert)
+        
+        alertController.addTextField { textField in
+            textField.placeholder = ("Workout name")
+        }
+        // A cancel action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("cancelled")
+        }
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            print("save")
+    }
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 
 }

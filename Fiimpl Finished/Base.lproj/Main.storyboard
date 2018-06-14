@@ -21,7 +21,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="Fiimpl_Finished" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Fiimpl_Finished" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,13 +30,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-su-TFH">
-                                <rect key="frame" x="114" y="74" width="186" height="87.666666666666686"/>
+                                <rect key="frame" x="114" y="30.000000000000007" width="186" height="87.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KHT-su-TFH" secondAttribute="height" multiplier="163:77" id="CZ1-ui-vmz"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Lmh-jJ-81d" userLabel="Streak block">
-                                <rect key="frame" x="82.666666666666671" y="191.66666666666666" width="248.66666666666663" height="73.666666666666657"/>
+                                <rect key="frame" x="82.666666666666671" y="147.66666666666666" width="248.66666666666663" height="73.666666666666657"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="WOy-Fl-igd" userLabel="Current streak">
                                         <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="37"/>
@@ -63,9 +63,9 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="st0-Wi-YNI" userLabel="Button Block">
-                                <rect key="frame" x="31" y="315.33333333333331" width="352" height="220.66666666666669"/>
+                                <rect key="frame" x="31" y="271.33333333333331" width="352" height="220.66666666666669"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="33c-tw-elx" userLabel="row1 images">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="33c-tw-elx" userLabel="row1 images">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="44"/>
                                         <subviews>
                                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setupSession" translatesAutoresizingMaskIntoConstraints="NO" id="ZBW-qV-jA3">
@@ -84,7 +84,7 @@
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-qt-K6k" userLabel="row1">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-qt-K6k" userLabel="row1">
                                         <rect key="frame" x="0.0" y="59" width="352" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxC-kd-ZfO">
@@ -129,7 +129,7 @@
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-no-6Vc" userLabel="row2">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-no-6Vc" userLabel="row2">
                                         <rect key="frame" x="0.0" y="176.66666666666669" width="352" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dps-Ff-b1m">
@@ -157,8 +157,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-SE-eTu" userLabel="Keep block">
-                                <rect key="frame" x="31" y="586" width="352" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-SE-eTu" userLabel="Keep block">
+                                <rect key="frame" x="31" y="542" width="352" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj4-UG-TyA">
                                         <rect key="frame" x="0.0" y="0.0" width="249.33333333333334" height="36"/>
@@ -237,7 +237,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1rT-VW-xU5">
-                                <rect key="frame" x="10.333333333333343" y="64" width="393.33333333333326" height="672"/>
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseBankCell" id="YZq-Cg-zYa" customClass="ExerciseBankExerciseCell" customModule="Fiimpl_Finished" customModuleProvider="target">
@@ -339,10 +339,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H6a-br-eCz">
-                                <rect key="frame" x="10.333333333333343" y="64.000000000000028" width="393.33333333333326" height="441.66666666666674"/>
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="441.66666666666669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="summaryExerciseCell" id="dYS-Xw-Zw8" customClass="WorkoutSummaryCell" customModule="Fiimpl_Finished" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutSummaryCell" id="dYS-Xw-Zw8" customClass="WorkoutSummaryCell" customModule="Fiimpl_Finished" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dYS-Xw-Zw8" id="ofi-Hc-HdU">
@@ -377,7 +377,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v6l-40-cmn" userLabel="Controls stack">
-                                <rect key="frame" x="31" y="555.66666666666663" width="352" height="111"/>
+                                <rect key="frame" x="31" y="511.66666666666674" width="352" height="111"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVO-uX-IkD">
                                         <rect key="frame" x="0.0" y="0.0" width="176" height="111"/>
@@ -385,6 +385,9 @@
                                         <state key="normal" title="Make favourite">
                                             <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="favouriteButtonTapped:" destination="7CL-FU-wHo" eventType="touchUpInside" id="XHB-H2-qdf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAC-hl-Jx8">
                                         <rect key="frame" x="176" y="0.0" width="176" height="111"/>
@@ -392,6 +395,9 @@
                                         <state key="normal" title="Finish">
                                             <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="ija-lU-vqU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -431,7 +437,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S03-MN-cZ9">
-                                <rect key="frame" x="10.333333333333343" y="64.000000000000028" width="393.33333333333326" height="441.66666666666674"/>
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="441.66666666666669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutExerciseCell" id="9kw-RB-BAl" customClass="WorkoutCell" customModule="Fiimpl_Finished" customModuleProvider="target">
@@ -478,7 +484,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GDT-69-QHw" userLabel="Controls stack">
-                                <rect key="frame" x="10.333333333333343" y="531.66666666666663" width="393.33333333333326" height="128.66666666666663"/>
+                                <rect key="frame" x="10.333333333333343" y="485.33333333333331" width="393.33333333333326" height="128.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="BUX-uO-afp" userLabel="Rounds stack">
                                         <rect key="frame" x="48" y="0.0" width="297.33333333333331" height="54.333333333333336"/>
@@ -495,6 +501,9 @@
                                                     <constraint firstAttribute="width" secondItem="C3q-cD-LZr" secondAttribute="height" multiplier="1:1" id="etI-dJ-990"/>
                                                 </constraints>
                                                 <state key="normal" image="addRound"/>
+                                                <connections>
+                                                    <action selector="addRoundTapped:" destination="dAS-1m-QVa" eventType="touchUpInside" id="nLY-f6-9L0"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esU-w5-KcT">
                                                 <rect key="frame" x="263.66666666666669" y="0.0" width="33.666666666666686" height="54.333333333333336"/>
@@ -505,7 +514,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="i43-59-cwQ" userLabel="Time stack">
-                                        <rect key="frame" x="72.000000000000014" y="74.333333333333371" width="249.33333333333337" height="54.333333333333343"/>
+                                        <rect key="frame" x="72.000000000000014" y="74.333333333333314" width="249.33333333333337" height="54.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRD-Oa-pj0">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="54.333333333333336"/>
@@ -514,6 +523,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" image="timerPlay"/>
+                                                <connections>
+                                                    <action selector="timerControlTapped:" destination="dAS-1m-QVa" eventType="touchUpInside" id="2kD-sk-nIQ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjo-Ov-FPR">
                                                 <rect key="frame" x="110.00000000000001" y="0.0" width="139.33333333333337" height="54.333333333333336"/>
@@ -567,7 +579,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmS-Zl-VAv">
-                                <rect key="frame" x="10.333333333333343" y="64" width="393.33333333333326" height="672"/>
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouriteNameCell" id="aYO-b2-y3v">
@@ -615,7 +627,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hEe-QG-AYn">
-                                <rect key="frame" x="10.333333333333343" y="64" width="393.33333333333326" height="672"/>
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notebookCell" id="5ww-Jh-Q4h">
@@ -660,7 +672,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5XW-wR-Fxo" userLabel="Name stack">
-                                <rect key="frame" x="31" y="74" width="352" height="110.33333333333331"/>
+                                <rect key="frame" x="31" y="29.999999999999993" width="352" height="110.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long do you want to train for?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbB-0W-GOK">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="33.666666666666664"/>
@@ -678,13 +690,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of workout?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nje-6U-We2">
-                                <rect key="frame" x="31" y="234.33333333333334" width="352" height="16.666666666666657"/>
+                                <rect key="frame" x="31" y="190.33333333333334" width="352" height="16.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z7e-fO-mFp" userLabel="repsStack">
-                                <rect key="frame" x="31" y="261" width="352" height="66.666666666666686"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z7e-fO-mFp" userLabel="repsStack">
+                                <rect key="frame" x="31" y="217" width="352" height="66.666666666666686"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="va0-S7-rRe">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="67.666666666666671"/>
@@ -700,7 +712,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tm1-yD-gLm">
-                                <rect key="frame" x="31" y="352.66666666666669" width="352" height="147.33333333333331"/>
+                                <rect key="frame" x="31" y="308.66666666666669" width="352" height="147.33333333333331"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Go">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -758,7 +770,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WKi-xy-GpL" userLabel="Name stack">
-                                <rect key="frame" x="31" y="74" width="352" height="110.33333333333331"/>
+                                <rect key="frame" x="31" y="29.999999999999993" width="352" height="110.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your exercise called?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHp-B4-Drv">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="33.666666666666664"/>
@@ -766,7 +778,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exercise name" textAlignment="natural" minimumFontSize="17" background="inputBox" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-Ou-4Yt">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Exercise name" textAlignment="center" minimumFontSize="17" background="inputBox" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-Ou-4Yt">
                                         <rect key="frame" x="0.0" y="43.666666666666664" width="352" height="66.666666666666686"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -776,22 +788,22 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are the min and max no. of reps you want to set for this exercise?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqZ-eg-FIn">
-                                <rect key="frame" x="31" y="234.33333333333334" width="352" height="33.000000000000028"/>
+                                <rect key="frame" x="31" y="190.33333333333334" width="352" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-Ze-Imp" userLabel="repsStack">
-                                <rect key="frame" x="31" y="277.33333333333331" width="352" height="66.666666666666686"/>
+                                <rect key="frame" x="31" y="233.33333333333334" width="352" height="66.666666666666657"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Min. reps" textAlignment="natural" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="VDn-IO-qwX">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Min. reps" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="VDn-IO-qwX">
                                         <rect key="frame" x="0.0" y="0.0" width="171" height="66.666666666666671"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Max. exercises" textAlignment="natural" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-X0-qOQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Max. exercises" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-X0-qOQ">
                                         <rect key="frame" x="181" y="0.0" width="171" height="66.666666666666671"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -806,7 +818,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6W8-3x-c0D" userLabel="Type Stack">
-                                <rect key="frame" x="31" y="394" width="352" height="111"/>
+                                <rect key="frame" x="31" y="350" width="352" height="111"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of exercise is it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZl-gC-eq1">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="16.666666666666668"/>
@@ -825,7 +837,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMP-7e-WHx">
-                                <rect key="frame" x="31" y="525" width="352" height="147.33333333333337"/>
+                                <rect key="frame" x="31" y="480.99999999999994" width="352" height="147.33333333333331"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Add exercise">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -891,7 +903,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jyZ-ca-oU3" userLabel="Details stack">
-                                <rect key="frame" x="31" y="73.999999999999986" width="352" height="220.66666666666663"/>
+                                <rect key="frame" x="31" y="29.999999999999986" width="352" height="220.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This favourite workout is called" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFA-Aq-g5O">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="32.666666666666664"/>
@@ -906,7 +918,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last time you managed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FK-AN-yWf">
-                                        <rect key="frame" x="0.0" y="75.333333333333343" width="352" height="32.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="75.333333333333329" width="352" height="32.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -932,13 +944,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set time for workout" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgs-U9-U4F">
-                                <rect key="frame" x="31" y="329.66666666666669" width="352" height="16.666666666666686"/>
+                                <rect key="frame" x="31" y="285.66666666666669" width="352" height="16.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZUG-zc-YJ4" userLabel="timeStack">
-                                <rect key="frame" x="119.33333333333333" y="356.33333333333331" width="175.33333333333337" height="73.666666666666686"/>
+                                <rect key="frame" x="119.33333333333333" y="312.33333333333331" width="175.33333333333337" height="73.666666666666686"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Workout Time" textAlignment="natural" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="T42-UT-9tC" userLabel="timeInput">
                                         <rect key="frame" x="0.0" y="0.0" width="175.33333333333334" height="73.666666666666671"/>
@@ -953,7 +965,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad1-4X-Z9e">
-                                <rect key="frame" x="31" y="455" width="352" height="55.333333333333314"/>
+                                <rect key="frame" x="31" y="411" width="352" height="55.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Go">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1028,5 +1040,6 @@
         <segue reference="Ewi-xl-6sC"/>
         <segue reference="ADT-ng-dZD"/>
         <segue reference="vEA-5L-fGv"/>
+        <segue reference="ija-lU-vqU"/>
     </inferredMetricsTieBreakers>
 </document>
