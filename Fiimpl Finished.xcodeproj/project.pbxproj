@@ -18,6 +18,7 @@
 		D9B8FF6B20D1602A009A69FE /* AddExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8FF6A20D1602A009A69FE /* AddExerciseViewController.swift */; };
 		D9EA6E8820D2692900EBEBCE /* SetupWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EA6E8720D2692900EBEBCE /* SetupWorkoutViewController.swift */; };
 		D9EA6E8A20D2693900EBEBCE /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EA6E8920D2693900EBEBCE /* WorkoutViewController.swift */; };
+		D9EA6E8C20D2853C00EBEBCE /* WorkoutSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EA6E8B20D2853C00EBEBCE /* WorkoutSummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D9B8FF6A20D1602A009A69FE /* AddExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseViewController.swift; sourceTree = "<group>"; };
 		D9EA6E8720D2692900EBEBCE /* SetupWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWorkoutViewController.swift; sourceTree = "<group>"; };
 		D9EA6E8920D2693900EBEBCE /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		D9EA6E8B20D2853C00EBEBCE /* WorkoutSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				D9B8FF6A20D1602A009A69FE /* AddExerciseViewController.swift */,
 				D9EA6E8720D2692900EBEBCE /* SetupWorkoutViewController.swift */,
 				D9EA6E8920D2693900EBEBCE /* WorkoutViewController.swift */,
+				D9EA6E8B20D2853C00EBEBCE /* WorkoutSummaryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9009DD620D0611C0020F2AE /* ExerciseBankViewController.swift in Sources */,
+				D9EA6E8C20D2853C00EBEBCE /* WorkoutSummaryViewController.swift in Sources */,
 				D985D6D020CE9F9D00C74D7F /* Model.swift in Sources */,
 				D9EA6E8A20D2693900EBEBCE /* WorkoutViewController.swift in Sources */,
 				D9EA6E8820D2692900EBEBCE /* SetupWorkoutViewController.swift in Sources */,

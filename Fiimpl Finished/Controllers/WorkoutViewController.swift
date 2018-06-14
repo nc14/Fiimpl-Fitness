@@ -7,15 +7,177 @@
 //
 
 import UIKit
+import RealmSwift
 
-class WorkoutViewController: UIViewController {
+class WorkoutCell : UITableViewCell {
+    
+    var delegate: WorkoutCellDelegate?
 
+    @IBAction func swapButtonTapped(_ sender: Any) {
+        delegate?.swapButtonTapped(cell: self)
+    }
+    
+    @IBOutlet weak var exerciseName: UILabel!
+    @IBOutlet weak var repsNumber: UILabel!
+    @IBOutlet weak var swapButton: UIButton!
+    
+}
+
+protocol WorkoutCellDelegate {
+    func swapButtonTapped(cell: WorkoutCell)
+}
+
+class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, WorkoutCellDelegate {
+
+    @IBOutlet weak var workoutTableView: UITableView!
+    @IBOutlet weak var roundsLabel: UILabel!
+    @IBOutlet weak var timerControlOutlet: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    var swapButtonEnabled : Bool = true
+    var workoutID = UUID().uuidString
+    var rounds = 0
+    var isTimerRunning = false
+    var workoutTimerObject = Timer()
+    
+    var selectedWorkoutExerciseArray = [WorkoutExercise]()
+    var selectedWorkoutTime : Int = 0
+    
+    
     override func viewDidLoad() {
+        
+        selectedWorkoutTime = selectedWorkoutTime * 60
+        timeLabel.text = timeString(time: TimeInterval(selectedWorkoutTime))
+        roundsLabel.text = String(0)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    var selectedWorkoutExerciseArray = [WorkoutExercise]()
-    var selectedWorkoutTime : Int = 0
+    //MARK: Table set up
+    
+    //return number of cells equivalent to the number of exercises in the array
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return selectedWorkoutExerciseArray.count
+    }
+    
+    //configure tableview to use the custom workout cell UI and to use WorkoutCell as the class
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell", for: indexPath) as! WorkoutCell
+        cell.delegate = self
+        let exerciseName = selectedWorkoutExerciseArray[indexPath.row]
+        
+        cell.swapButton.isEnabled = swapButtonEnabled
+        cell.exerciseName.text = exerciseName.name
+        cell.repsNumber.text = String(exerciseName.reps)
+        return cell
+    }
+    
+    func swapButtonTapped(cell: WorkoutCell) {
+        let realmExercisePool = realm.objects(ExerciseGeneratorObject.self)
+        let index = Int(arc4random_uniform(UInt32(realmExercisePool.count)))
+        let newExercise = realmExercisePool[index].generateExercise()
+        cell.exerciseName.text = newExercise.name
+        cell.repsNumber.text = String(newExercise.reps)
+    }
+
+//MARK: Timer functions
+
+//function to convert workout time to a decent format
+    func timeString(time:TimeInterval) -> String {
+    let minutes = Int(time) / 60 % 60
+    let seconds = Int(time) % 60
+    return String(format:"%02i:%02i", minutes, seconds)
 }
+
+//Workout Timer function.  Decrements the timer by 1 each time.  Called from runTimer function.
+@objc func workoutTimer() {
+    
+    let alert = UIAlertController(title: "Workout Done", message: "Save and go to summary", preferredStyle: .alert)
+    let saveWorkoutAction = UIAlertAction(title: "Save", style: .default) { (UIAlertAction) in
+        self.saveToRealm()
+        self.updateStreak()
+        self.performSegue(withIdentifier: "goToSummary", sender: self)
+    }
+    selectedWorkoutTime = selectedWorkoutTime - 1
+    timeLabel.text = timeString(time: TimeInterval(selectedWorkoutTime))
+    //what to do when timer reaches 0
+    if (selectedWorkoutTime==0) {
+        timerControlOutlet.isEnabled = false
+        workoutTimerObject.invalidate()
+        alert.addAction(saveWorkoutAction)
+        present (alert, animated: true, completion: nil)
+    }
+    }
+    
+    //MARK: Realm functions
+    
+    //save to Realm
+    
+    func saveToRealm() {
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let workoutData = WorkoutSessionObject()
+        workoutData.workoutID = workoutID
+        workoutData.exercises.append(objectsIn: selectedWorkoutExerciseArray)
+        workoutData.rounds = Int(roundsLabel.text!)!
+        workoutData.totalExerciseCount = selectedWorkoutExerciseArray.count
+        
+        do {
+            try realm.write {
+                realm.add(workoutData)
+            }
+        } catch {
+            print("error adding workout to realm")
+        }
+    }
+    
+    //update Streak function
+    
+    func updateStreak() {
+        
+        let calendar = Calendar.current
+        let streakObject = realm.objects(StreakObject.self).first
+        let currentStreak = streakObject?.currentStreak ?? 0
+        let bestStreak = streakObject?.longestStreak
+        let newStreak = (currentStreak) + 1
+        let lastDate = streakObject?.lastWorkoutDate
+        // Replace the hour (time) of both dates with 00:00
+        let date1 = calendar.startOfDay(for: lastDate!)
+        let date2 = calendar.startOfDay(for: Date())
+        
+        let daysBetween = calendar.dateComponents([.day], from: date1, to: date2)
+        print (daysBetween)
+        
+        try! realm.write {
+            streakObject?.currentStreak = newStreak
+        }
+        
+        if (daysBetween.day) == 0 {
+            try! realm.write {
+                streakObject?.currentStreak = newStreak
+                streakObject?.lastWorkoutDate = Date()
+            }
+        } else {
+            try! realm.write {
+                streakObject?.currentStreak = 0
+                streakObject?.lastWorkoutDate = Date()
+            }
+        }
+        if newStreak > bestStreak! {
+            try! realm.write {
+                streakObject?.longestStreak = newStreak
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let UUID = workoutID
+        if let destVC = segue.destination as? WorkoutSummaryViewController {
+            destVC.workoutID = UUID
+        }
+    }
+}
+    
+
+
