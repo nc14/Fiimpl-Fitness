@@ -42,16 +42,21 @@ class SetupWorkoutViewController: UIViewController {
     func standardWorkout() {
         let finalWorkoutTime = Int(timeInputField.text!)
         self.selectedWorkout = FinalWorkout(generatedWorkout: WorkoutGenerator.standardWorkout.generate(), timeForWorkout: finalWorkoutTime!)
+        performSegue(withIdentifier: "goToWorkout", sender: self )
+
     }
     
     func repeaterWorkout() {
         let finalWorkoutTime = Int(timeInputField.text!)
         self.selectedWorkout = FinalWorkout(generatedWorkout: WorkoutGenerator.repeaterWorkout.generate(), timeForWorkout: finalWorkoutTime!)
+        performSegue(withIdentifier: "goToWorkout", sender: self )
+
     }
     
     func varietyWorkout() {
         let finalWorkoutTime = Int(timeInputField.text!)
         self.selectedWorkout = FinalWorkout(generatedWorkout: WorkoutGenerator.varietyWorkout.generate(), timeForWorkout: finalWorkoutTime!)
+        performSegue(withIdentifier: "goToWorkout", sender: self )
     }
     
     //MARK: Go Button

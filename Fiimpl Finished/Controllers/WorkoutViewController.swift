@@ -63,7 +63,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //configure tableview to use the custom workout cell UI and to use WorkoutCell as the class
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell", for: indexPath) as! WorkoutCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "workoutExerciseCell", for: indexPath) as! WorkoutCell
         cell.delegate = self
         let exerciseName = selectedWorkoutExerciseArray[indexPath.row]
         
@@ -171,12 +171,23 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let UUID = workoutID
+        let workoutData = WorkoutSessionObject()
+        workoutData.workoutID = workoutID
+//        workoutData.exercises.append(objectsIn: selectedWorkoutExerciseArray)
+        workoutData.rounds = Int(roundsLabel.text!)!
+        workoutData.totalExerciseCount = selectedWorkoutExerciseArray.count
+        
         if let destVC = segue.destination as? WorkoutSummaryViewController {
-            destVC.workoutID = UUID
+            destVC.totalRounds = workoutData.rounds
+            destVC.workoutID = workoutData.workoutID
+            destVC.workoutExercises = selectedWorkoutExerciseArray
+            destVC.exerciseCount = workoutData.totalExerciseCount
         }
     }
+    
+    
 }
     
 
