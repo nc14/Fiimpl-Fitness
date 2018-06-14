@@ -248,29 +248,29 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Pkl-fq-ChX" userLabel="cell contents stack">
-                                                    <rect key="frame" x="0.0" y="0.0" width="356" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="43.666666666666664"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Exercise Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GsG-Ak-5TO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="43.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="197" height="43.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epC-OL-Iwe">
-                                                            <rect key="frame" x="184.66666666666666" y="0.0" width="45.666666666666657" height="43.666666666666664"/>
+                                                            <rect key="frame" x="197" y="0.0" width="48.666666666666657" height="43.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POB-ih-u8o">
-                                                            <rect key="frame" x="230.33333333333334" y="0.0" width="52.333333333333343" height="43.666666666666664"/>
+                                                            <rect key="frame" x="245.66666666666666" y="0.0" width="55.666666666666657" height="43.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fH-n0-cM0">
-                                                            <rect key="frame" x="282.66666666666669" y="0.0" width="73.333333333333314" height="43.666666666666664"/>
-                                                            <state key="normal" title="Delete"/>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fH-n0-cM0">
+                                                            <rect key="frame" x="301.33333333333331" y="0.0" width="92" height="43.666666666666664"/>
+                                                            <state key="normal" image="Trash"/>
                                                             <connections>
                                                                 <action selector="deleteButtonTapped:" destination="YZq-Cg-zYa" eventType="touchUpInside" id="wYc-Pi-ejL"/>
                                                             </connections>
@@ -342,7 +342,7 @@
                                 <rect key="frame" x="10.333333333333343" y="64.000000000000028" width="393.33333333333326" height="441.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="summaryExerciseCell" id="dYS-Xw-Zw8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="summaryExerciseCell" id="dYS-Xw-Zw8">
                                         <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dYS-Xw-Zw8" id="ofi-Hc-HdU">
@@ -410,7 +410,7 @@
                                 <rect key="frame" x="10.333333333333343" y="64.000000000000028" width="393.33333333333326" height="441.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutExerciseCell" id="9kw-RB-BAl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutExerciseCell" id="9kw-RB-BAl">
                                         <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9kw-RB-BAl" id="0LE-3p-1r0">
@@ -509,7 +509,7 @@
                                 <rect key="frame" x="10.333333333333343" y="64" width="393.33333333333326" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouriteNameCell" id="aYO-b2-y3v">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouriteNameCell" id="aYO-b2-y3v">
                                         <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aYO-b2-y3v" id="ZTP-n5-hz1">
@@ -557,7 +557,7 @@
                                 <rect key="frame" x="10.333333333333343" y="64" width="393.33333333333326" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notebookCell" id="5ww-Jh-Q4h">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notebookCell" id="5ww-Jh-Q4h">
                                         <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ww-Jh-Q4h" id="0KF-hB-8dz">
@@ -690,7 +690,7 @@
         <!--Add Exercise-->
         <scene sceneID="iSk-Vm-19N">
             <objects>
-                <viewController title="Add Exercise" id="DeI-Rw-nqf" sceneMemberID="viewController">
+                <viewController title="Add Exercise" id="DeI-Rw-nqf" customClass="AddExerciseViewController" customModule="Fiimpl_Finished" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Xj-DQ-Pwk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -728,7 +728,7 @@
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Min. reps" textAlignment="natural" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="VDn-IO-qwX">
                                         <rect key="frame" x="0.0" y="0.0" width="171" height="66.666666666666671"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
@@ -771,6 +771,12 @@
                                 <state key="normal" title="Add exercise">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="DeI-Rw-nqf" eventType="touchUpInside" id="8hV-ZE-oKg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -802,6 +808,13 @@
                         <viewLayoutGuide key="safeArea" id="Eab-zE-9Wf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="UQQ-HD-9Am"/>
+                    <connections>
+                        <outlet property="addExerciseButtonOutlet" destination="TMP-7e-WHx" id="HiS-TO-JJc"/>
+                        <outlet property="exerciseName" destination="IYw-Ou-4Yt" id="iY0-db-jiW"/>
+                        <outlet property="exerciseType" destination="QTI-IG-f8J" id="dY3-N3-IBD"/>
+                        <outlet property="maximumReps" destination="zNG-X0-qOQ" id="kR3-cq-IE1"/>
+                        <outlet property="minimumReps" destination="VDn-IO-qwX" id="Gan-D0-nHE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXO-ft-5Kp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -939,6 +952,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Trash" width="53" height="65"/>
         <image name="addRound" width="106" height="106"/>
         <image name="background" width="750" height="1334"/>
         <image name="exerciseBank" width="83" height="48"/>
