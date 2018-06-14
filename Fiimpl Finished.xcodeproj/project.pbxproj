@@ -16,6 +16,8 @@
 		D985D6D020CE9F9D00C74D7F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985D6CF20CE9F9D00C74D7F /* Model.swift */; };
 		D9AE060720CF14F800756881 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE060620CF14F800756881 /* HomeViewController.swift */; };
 		D9B8FF6B20D1602A009A69FE /* AddExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8FF6A20D1602A009A69FE /* AddExerciseViewController.swift */; };
+		D9EA6E8820D2692900EBEBCE /* SetupWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EA6E8720D2692900EBEBCE /* SetupWorkoutViewController.swift */; };
+		D9EA6E8A20D2693900EBEBCE /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EA6E8920D2693900EBEBCE /* WorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		D985D6CF20CE9F9D00C74D7F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D9AE060620CF14F800756881 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D9B8FF6A20D1602A009A69FE /* AddExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseViewController.swift; sourceTree = "<group>"; };
+		D9EA6E8720D2692900EBEBCE /* SetupWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWorkoutViewController.swift; sourceTree = "<group>"; };
+		D9EA6E8920D2693900EBEBCE /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 				D9AE060620CF14F800756881 /* HomeViewController.swift */,
 				D9009DD520D0611C0020F2AE /* ExerciseBankViewController.swift */,
 				D9B8FF6A20D1602A009A69FE /* AddExerciseViewController.swift */,
+				D9EA6E8720D2692900EBEBCE /* SetupWorkoutViewController.swift */,
+				D9EA6E8920D2693900EBEBCE /* WorkoutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 			files = (
 				D9009DD620D0611C0020F2AE /* ExerciseBankViewController.swift in Sources */,
 				D985D6D020CE9F9D00C74D7F /* Model.swift in Sources */,
+				D9EA6E8A20D2693900EBEBCE /* WorkoutViewController.swift in Sources */,
+				D9EA6E8820D2692900EBEBCE /* SetupWorkoutViewController.swift in Sources */,
 				D9B8FF6B20D1602A009A69FE /* AddExerciseViewController.swift in Sources */,
 				D965F7D220C9BF7C0063A09A /* AppDelegate.swift in Sources */,
 				D9AE060720CF14F800756881 /* HomeViewController.swift in Sources */,

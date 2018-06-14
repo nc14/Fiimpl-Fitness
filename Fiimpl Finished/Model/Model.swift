@@ -30,6 +30,23 @@ class StreakObject: Object {
 
 //MARK: Workout Objects
 
+// This struct is used to pass time variables and the workout details between VC's.
+
+struct FinalWorkout {
+    
+    var generatedWorkout : Workout
+    var timeForWorkout : Int
+    
+}
+
+// This struct holds workout exercises to pass between VC's.
+
+struct Workout {
+    
+    let workoutExercises : [WorkoutExercise]
+    
+}
+
 /* An exercise generator object is what provides the criteria for an instance of an exercise.
  It has a range of reps it could choose from and contains a function to generate a WorkoutExercise instance. */
 
@@ -102,6 +119,30 @@ class WorkoutExercise: Object {
         return Workout(workoutExercises: myExercises)
         
     }
+    
+    static var standardWorkout: WorkoutGenerator {
+        return WorkoutGenerator(
+            minCount: 3,
+            maxCount: 6
+        )
+        
+    }
+    
+    static var repeaterWorkout: WorkoutGenerator {
+        return WorkoutGenerator(
+            minCount: 1,
+            maxCount: 2
+        )
+        
+    }
+    
+    static var varietyWorkout: WorkoutGenerator {
+        return WorkoutGenerator(
+            minCount: 6,
+            maxCount: 10
+        )
+        
+    }
 
 }
 
@@ -109,6 +150,7 @@ class WorkoutExercise: Object {
 
 class WorkoutSessionObject: Object {
     @objc dynamic var workoutID = UUID().uuidString
+    @objc dynamic var workoutType = ""
     @objc dynamic var workoutName = ""
     let exercises = List<WorkoutExercise>()
     @objc dynamic var totalExerciseCount = 0
@@ -120,21 +162,7 @@ class WorkoutSessionObject: Object {
     }
 }
 
-// This struct is used to pass time variables and the workout details between VC's.
 
-struct FinalWorkout {
-    
-    var generatedWorkout : Workout
-    var timeForWorkout : Int
-    
-}
 
-// This struct holds workout exercises to pass between VC's.
-
-struct Workout {
-    
-    let workoutExercises : [WorkoutExercise]
-    
-}
 
 
