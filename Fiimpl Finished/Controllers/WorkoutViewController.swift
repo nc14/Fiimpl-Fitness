@@ -210,7 +210,6 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let workoutData = WorkoutSessionObject()
         workoutData.workoutID = workoutID
-//        workoutData.exercises.append(objectsIn: selectedWorkoutExerciseArray)
         workoutData.rounds = Int(roundsLabel.text!)!
         workoutData.totalExerciseCount = selectedWorkoutExerciseArray.count
         
@@ -219,6 +218,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
             destVC.workoutID = workoutData.workoutID
             destVC.workoutExercises = selectedWorkoutExerciseArray
             destVC.exerciseCount = workoutData.totalExerciseCount
+            destVC.time = workoutData.workoutTime
         }
     }
     

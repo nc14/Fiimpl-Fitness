@@ -22,6 +22,7 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
     var workoutID = UUID().uuidString
     var workoutExercises = [WorkoutExercise]()
     var exerciseCount : Int = 0
+    var time : Int = 0
     
     override func viewDidLoad() {
         
@@ -51,7 +52,7 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     @IBAction func favouriteButtonTapped(_ sender: Any) {
-        
+    //set up alert controller
     let alertController : UIAlertController = UIAlertController(title: "Save as favourite", message: "Give your workout a name to save it", preferredStyle: .alert)
         
         alertController.addTextField { textField in
@@ -61,7 +62,7 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             print("cancelled")
         }
-        
+        //favourite object values
         let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
             let favouriteName = alertController.textFields?.first?.text ?? ("Empty")
             let workout = (realm.object(ofType: WorkoutSessionObject.self, forPrimaryKey: self.workoutID))!
@@ -69,22 +70,33 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
             favouriteWorkout.favouriteWorkoutName = favouriteName
             favouriteWorkout.workoutReference = workout
             
+            //favourite history record
+            let recordTime = self.time
+            let recordDate = Date()
+            let recordRounds = self.totalRounds
+            
+            let historyRecord = FavouriteHistoryRecord()
+            historyRecord.date = recordDate
+            historyRecord.time = recordTime
+            historyRecord.rounds = recordRounds
             
             do {
                 try realm.write {
                     realm.add(favouriteWorkout)
+                    realm.add(historyRecord)
                     workout.favourite = true
                 }
             } catch {
                 print ("Error adding favourite")
             }
             
-            print("save")
     }
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)
     }
+    
+    
 
 }
