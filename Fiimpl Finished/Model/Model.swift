@@ -163,8 +163,11 @@ class WorkoutSessionObject: Object {
 
 class FavouriteObject: Object {
     @objc dynamic var favouriteWorkoutName = ""
-    @objc dynamic var workoutReference = WorkoutSessionObject.primaryKey()
+    @objc dynamic var workoutReference:WorkoutSessionObject?
     
+    override class func primaryKey() -> String? {
+        return "favouriteWorkoutName"
+    }
 }
 
 

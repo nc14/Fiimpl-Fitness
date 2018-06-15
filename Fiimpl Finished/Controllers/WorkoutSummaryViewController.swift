@@ -63,6 +63,20 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
         }
         
         let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            let favouriteName = alertController.textFields?.first?.text ?? ("Empty")
+            let workout = (realm.object(ofType: WorkoutSessionObject.self, forPrimaryKey: self.workoutID))!
+            let favouriteWorkout = FavouriteObject()
+            favouriteWorkout.favouriteWorkoutName = favouriteName
+            favouriteWorkout.workoutReference = workout
+            
+            do {
+                try realm.write {
+                    realm.add(favouriteWorkout)
+                }
+            } catch {
+                print ("Error adding favourite")
+            }
+            
             print("save")
     }
         alertController.addAction(saveAction)
