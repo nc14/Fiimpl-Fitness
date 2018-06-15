@@ -67,23 +67,21 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
             let favouriteName = alertController.textFields?.first?.text ?? ("Empty")
             let workout = (realm.object(ofType: WorkoutSessionObject.self, forPrimaryKey: self.workoutID))!
             let favouriteWorkout = FavouriteObject()
-            favouriteWorkout.favouriteWorkoutName = favouriteName
-            favouriteWorkout.workoutReference = workout
-            
-            //favourite history record
             let recordTime = self.time
             let recordDate = Date()
             let recordRounds = self.totalRounds
-            
             let historyRecord = FavouriteHistoryRecord()
             historyRecord.date = recordDate
             historyRecord.time = recordTime
             historyRecord.rounds = recordRounds
             
+            favouriteWorkout.favouriteWorkoutName = favouriteName
+            favouriteWorkout.workoutReference = workout
+            favouriteWorkout.workoutHistory.append(historyRecord)
+            
             do {
                 try realm.write {
                     realm.add(favouriteWorkout)
-                    realm.add(historyRecord)
                     workout.favourite = true
                 }
             } catch {

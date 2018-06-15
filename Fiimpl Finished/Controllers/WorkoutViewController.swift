@@ -218,7 +218,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
             destVC.workoutID = workoutData.workoutID
             destVC.workoutExercises = selectedWorkoutExerciseArray
             destVC.exerciseCount = workoutData.totalExerciseCount
-            destVC.time = workoutData.workoutTime
+            destVC.time = originalTime
         }
     }
     
