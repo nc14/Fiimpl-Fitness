@@ -154,6 +154,7 @@ class WorkoutSessionObject: Object {
     let exercises = List<WorkoutExercise>()
     @objc dynamic var totalExerciseCount = 0
     @objc dynamic var rounds = 0
+    @objc dynamic var workoutTime = 0
     @objc dynamic var favourite : Bool = false
     
     override class func primaryKey() -> String? {

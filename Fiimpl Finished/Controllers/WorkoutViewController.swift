@@ -42,6 +42,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var selectedWorkoutExerciseArray = [WorkoutExercise]()
     var selectedWorkoutTime : Int = 0
+    var selectedWorkoutType = ""
     
     
     override func viewDidLoad() {
@@ -152,6 +153,8 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         workoutData.exercises.append(objectsIn: selectedWorkoutExerciseArray)
         workoutData.rounds = Int(roundsLabel.text!)!
         workoutData.totalExerciseCount = selectedWorkoutExerciseArray.count
+        workoutData.workoutTime = selectedWorkoutTime
+        workoutData.workoutType = selectedWorkoutType
         
         do {
             try realm.write {

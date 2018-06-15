@@ -69,9 +69,11 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
             favouriteWorkout.favouriteWorkoutName = favouriteName
             favouriteWorkout.workoutReference = workout
             
+            
             do {
                 try realm.write {
                     realm.add(favouriteWorkout)
+                    workout.favourite = true
                 }
             } catch {
                 print ("Error adding favourite")

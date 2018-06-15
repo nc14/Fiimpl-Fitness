@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		39053AC061F90E92F65E1BB0 /* Pods_Fiimpl_Finished.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852C9194EA08529698E1B6E0 /* Pods_Fiimpl_Finished.framework */; };
 		D9009DD620D0611C0020F2AE /* ExerciseBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9009DD520D0611C0020F2AE /* ExerciseBankViewController.swift */; };
+		D943730120D40B7300BCEA09 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943730020D40B7300BCEA09 /* FavouritesViewController.swift */; };
+		D943730320D4185900BCEA09 /* FavouriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943730220D4185900BCEA09 /* FavouriteDetailViewController.swift */; };
 		D965F7D220C9BF7C0063A09A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965F7D120C9BF7C0063A09A /* AppDelegate.swift */; };
 		D965F7D720C9BF7C0063A09A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965F7D520C9BF7C0063A09A /* Main.storyboard */; };
 		D965F7D920C9BF7C0063A09A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D965F7D820C9BF7C0063A09A /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		8250D5275F699554B7D521F0 /* Pods-Fiimpl Finished.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fiimpl Finished.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fiimpl Finished/Pods-Fiimpl Finished.release.xcconfig"; sourceTree = "<group>"; };
 		852C9194EA08529698E1B6E0 /* Pods_Fiimpl_Finished.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fiimpl_Finished.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9009DD520D0611C0020F2AE /* ExerciseBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseBankViewController.swift; sourceTree = "<group>"; };
+		D943730020D40B7300BCEA09 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		D943730220D4185900BCEA09 /* FavouriteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDetailViewController.swift; sourceTree = "<group>"; };
 		D965F7CE20C9BF7C0063A09A /* Fiimpl Finished.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fiimpl Finished.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D965F7D120C9BF7C0063A09A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D965F7D620C9BF7C0063A09A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				D9EA6E8720D2692900EBEBCE /* SetupWorkoutViewController.swift */,
 				D9EA6E8920D2693900EBEBCE /* WorkoutViewController.swift */,
 				D9EA6E8B20D2853C00EBEBCE /* WorkoutSummaryViewController.swift */,
+				D943730020D40B7300BCEA09 /* FavouritesViewController.swift */,
+				D943730220D4185900BCEA09 /* FavouriteDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -237,10 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D943730120D40B7300BCEA09 /* FavouritesViewController.swift in Sources */,
 				D9009DD620D0611C0020F2AE /* ExerciseBankViewController.swift in Sources */,
 				D9EA6E8C20D2853C00EBEBCE /* WorkoutSummaryViewController.swift in Sources */,
 				D985D6D020CE9F9D00C74D7F /* Model.swift in Sources */,
 				D9EA6E8A20D2693900EBEBCE /* WorkoutViewController.swift in Sources */,
+				D943730320D4185900BCEA09 /* FavouriteDetailViewController.swift in Sources */,
 				D9EA6E8820D2692900EBEBCE /* SetupWorkoutViewController.swift in Sources */,
 				D9B8FF6B20D1602A009A69FE /* AddExerciseViewController.swift in Sources */,
 				D965F7D220C9BF7C0063A09A /* AppDelegate.swift in Sources */,

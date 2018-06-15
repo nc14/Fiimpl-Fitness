@@ -33,7 +33,8 @@ class SetupWorkoutViewController: UIViewController {
         if let destVC = segue.destination as? WorkoutViewController {
             destVC.selectedWorkoutTime = finalWorkoutTime
             destVC.selectedWorkoutExerciseArray = finalWorkoutExercises
-        }
+            destVC.selectedWorkoutType = workoutTypeControl.titleForSegment(at: workoutTypeControl.selectedSegmentIndex)!
+            }
         }
     }
     

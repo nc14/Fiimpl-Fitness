@@ -570,7 +570,7 @@
         <!--View Favourites-->
         <scene sceneID="zkw-Eo-XSx">
             <objects>
-                <viewController title="View Favourites" id="i3S-At-diy" sceneMemberID="viewController">
+                <viewController title="View Favourites" id="i3S-At-diy" customClass="FavouritesViewController" customModule="Fiimpl_Finished" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ts-P9-xz1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -582,15 +582,31 @@
                                 <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouriteNameCell" id="aYO-b2-y3v">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouriteNameCell" id="aYO-b2-y3v" customClass="FavouriteWorkoutNameCell" customModule="Fiimpl_Finished" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aYO-b2-y3v" id="ZTP-n5-hz1">
                                             <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favourite Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpJ-Z2-i7b">
+                                                    <rect key="frame" x="15.000000000000028" y="11" width="120" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favouriteNameLabel" destination="fpJ-Z2-i7b" id="j21-aB-vuZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="i3S-At-diy" id="5YW-BT-gB5"/>
+                                    <outlet property="delegate" destination="i3S-At-diy" id="awd-bu-dde"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
