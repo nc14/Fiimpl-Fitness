@@ -42,11 +42,13 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var selectedWorkoutExerciseArray = [WorkoutExercise]()
     var selectedWorkoutTime : Int = 0
+    var originalTime : Int = 0
     var selectedWorkoutType = ""
     
     
     override func viewDidLoad() {
         
+        originalTime = selectedWorkoutTime
         selectedWorkoutTime = selectedWorkoutTime * 60
         timeLabel.text = timeString(time: TimeInterval(selectedWorkoutTime))
         roundsLabel.text = String(0)
@@ -87,14 +89,14 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func timerControlTapped(_ sender: UIButton) {
         
         if isTimerRunning == false {
-            sender.setImage(#imageLiteral(resourceName: "timerPlay"), for: UIControlState.normal)
+            sender.setImage(#imageLiteral(resourceName: "timerPause"), for: UIControlState.normal)
             runTimer()
             isTimerRunning = true
             swapButtonEnabled = false
             workoutTableView.reloadData()
             
         } else {
-            sender.setImage(#imageLiteral(resourceName: "timerPause"), for: UIControlState.normal)
+            sender.setImage(#imageLiteral(resourceName: "timerPlay"), for: UIControlState.normal)
             workoutTimerObject.invalidate()
             isTimerRunning = false
         }
@@ -153,7 +155,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         workoutData.exercises.append(objectsIn: selectedWorkoutExerciseArray)
         workoutData.rounds = Int(roundsLabel.text!)!
         workoutData.totalExerciseCount = selectedWorkoutExerciseArray.count
-        workoutData.workoutTime = selectedWorkoutTime
+        workoutData.workoutTime = originalTime
         workoutData.workoutType = selectedWorkoutType
         
         do {
