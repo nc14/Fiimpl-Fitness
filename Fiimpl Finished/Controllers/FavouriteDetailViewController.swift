@@ -54,6 +54,7 @@ class FavouriteDetailViewController: UIViewController {
                 destVC.selectedWorkoutExerciseArray = exercisesArray
                 destVC.selectedWorkoutType = favouriteWorkoutPassed.workoutType
                 destVC.isFavourite = true
+                destVC.workoutID = favouriteWorkoutPassed.workoutID
             }
             
         }

@@ -110,8 +110,23 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
         if isFavourite == true {
             
             
+            let favouriteObject = (realm.object(ofType: FavouriteObject.self, forPrimaryKey: self.workoutID))!
+//            let favouriteHistoryRecord = (realm.object(ofType: FavouriteHistoryRecord.self, forPrimaryKey: self.workoutID))
+            let favouriteHistoryRecord = FavouriteHistoryRecord()
             
-        } else {
+            favouriteHistoryRecord.date = Date()
+            favouriteHistoryRecord.rounds = self.totalRounds
+            favouriteHistoryRecord.time = self.time
+            
+            try! realm.write {
+                
+                favouriteObject.workoutHistory.append(favouriteHistoryRecord)
+                performSegue(withIdentifier: "workoutSummaryToHome", sender: self)
+            }
+            
+        }
+            
+        else {
             performSegue(withIdentifier: "workoutSummaryToHome", sender: self)
         }
         

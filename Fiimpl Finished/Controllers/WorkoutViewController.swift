@@ -127,12 +127,15 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
 //Workout Timer function.  Decrements the timer by 1 each time.  Called from runTimer function.
 @objc func workoutTimer() {
     
+    if isFavourite == false {
+    
     let alert = UIAlertController(title: "Workout Done", message: "Save and go to summary", preferredStyle: .alert)
     let saveWorkoutAction = UIAlertAction(title: "Save", style: .default) { (UIAlertAction) in
         self.saveToRealm()
 //        self.updateStreak()
         self.performSegue(withIdentifier: "goToWorkoutSummary", sender: self)
     }
+    
     selectedWorkoutTime = selectedWorkoutTime - 1
     timeLabel.text = timeString(time: TimeInterval(selectedWorkoutTime))
     //what to do when timer reaches 0
@@ -143,7 +146,25 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         present (alert, animated: true, completion: nil)
     }
     }
+    else {
     
+        let alert = UIAlertController(title: "Nice work", message: "Go to summary to save", preferredStyle: .alert)
+        let saveWorkoutAction = UIAlertAction(title: "Go to summary", style: .default) { (UIAlertAction) in
+            //        self.updateStreak()
+            self.performSegue(withIdentifier: "goToWorkoutSummary", sender: self)
+        }
+        
+        selectedWorkoutTime = selectedWorkoutTime - 1
+        timeLabel.text = timeString(time: TimeInterval(selectedWorkoutTime))
+        //what to do when timer reaches 0
+        if (selectedWorkoutTime==0) {
+            timerControlOutlet.isEnabled = false
+            workoutTimerObject.invalidate()
+            alert.addAction(saveWorkoutAction)
+            present (alert, animated: true, completion: nil)
+        }
+    }
+    }
     //MARK: Realm functions
     
     //save to Realm
