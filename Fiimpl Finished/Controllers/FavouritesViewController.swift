@@ -18,6 +18,7 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var favouriteWorkouts = realm.objects(FavouriteObject.self)
     var workoutToPass = WorkoutSessionObject()
+    var favouriteObjectToPass = FavouriteObject()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +38,18 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
-            // Get Cell Label
+            // What to do when a cell is pressed
             let indexPath = tableView.indexPathForSelectedRow
             let currentCell = tableView.cellForRow(at: indexPath!) as! FavouriteWorkoutNameCell
             let workoutName = currentCell.favouriteNameLabel.text
 
-            let favouriteWorkout = realm.object(ofType: FavouriteObject.self, forPrimaryKey: workoutName)
+        let favouriteWorkoutObject = realm.objects(FavouriteObject.self).filter("favouriteWorkoutName == %@", workoutName ?? "no name here").first
         
-            let referenceId = favouriteWorkout?.workoutReference?.workoutID
+            let favouriteWorkoutID = favouriteWorkoutObject?.workoutID
         
-            workoutToPass = realm.object(ofType: WorkoutSessionObject.self, forPrimaryKey: referenceId)!
-        
+            workoutToPass = realm.object(ofType: WorkoutSessionObject.self, forPrimaryKey: favouriteWorkoutID)!
+            favouriteObjectToPass = favouriteWorkoutObject!
+                
             performSegue(withIdentifier: "goToSetupFavourite", sender: self)
         
     }
@@ -56,7 +58,7 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
         if let destVC = segue.destination as? FavouriteDetailViewController {
             
             destVC.favouriteWorkoutPassed = workoutToPass
-            
+            destVC.favouriteObjectPassed = favouriteObjectToPass
         }
     }
 

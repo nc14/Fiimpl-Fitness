@@ -34,6 +34,7 @@ class SetupWorkoutViewController: UIViewController {
             destVC.selectedWorkoutTime = finalWorkoutTime
             destVC.selectedWorkoutExerciseArray = finalWorkoutExercises
             destVC.selectedWorkoutType = workoutTypeControl.titleForSegment(at: workoutTypeControl.selectedSegmentIndex)!
+            destVC.isFavourite = false
             }
         }
     }

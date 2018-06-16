@@ -44,6 +44,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     var selectedWorkoutTime : Int = 0
     var originalTime : Int = 0
     var selectedWorkoutType = ""
+    var isFavourite = false
     
     
     override func viewDidLoad() {
@@ -219,6 +220,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
             destVC.workoutExercises = selectedWorkoutExerciseArray
             destVC.exerciseCount = workoutData.totalExerciseCount
             destVC.time = originalTime
+            destVC.isFavourite = isFavourite
         }
     }
     

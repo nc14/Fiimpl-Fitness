@@ -396,7 +396,7 @@
                                             <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="ija-lU-vqU"/>
+                                            <action selector="finishButtonTapped:" destination="7CL-FU-wHo" eventType="touchUpInside" id="Num-pe-0yC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -420,6 +420,10 @@
                         <viewLayoutGuide key="safeArea" id="oLY-Tj-pda"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="k69-pO-inH"/>
+                    <connections>
+                        <outlet property="makeFavouriteOutlet" destination="LVO-uX-IkD" id="Fts-nC-BCJ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="workoutSummaryToHome" id="LMc-Vn-Tz7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RU3-2l-3Lw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -986,6 +990,9 @@
                                 <state key="normal" title="Go">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="UEs-DS-dr4" eventType="touchUpInside" id="G6Q-Iw-HDF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1013,6 +1020,14 @@
                         <viewLayoutGuide key="safeArea" id="WEN-Sr-XXw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="XHD-9u-ihB"/>
+                    <connections>
+                        <outlet property="goButtonOutlet" destination="ad1-4X-Z9e" id="cui-Ww-tKA"/>
+                        <outlet property="previousRoundsLabel" destination="oWH-zu-OXZ" id="iCk-zk-hC9"/>
+                        <outlet property="previousTimeLabel" destination="VUm-7k-iG8" id="BqD-O4-g1V"/>
+                        <outlet property="timeInputOutlet" destination="T42-UT-9tC" id="Ufr-x7-nQC"/>
+                        <outlet property="workoutNameLabel" destination="Xo2-hD-fPn" id="P77-Rh-k6i"/>
+                        <segue destination="dAS-1m-QVa" kind="show" identifier="goToFavouriteWorkout" id="3Ee-I2-rYc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNh-Ls-wUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1055,7 +1070,8 @@
         <segue reference="W60-tI-uRl"/>
         <segue reference="Ewi-xl-6sC"/>
         <segue reference="ADT-ng-dZD"/>
+        <segue reference="3Ee-I2-rYc"/>
         <segue reference="vEA-5L-fGv"/>
-        <segue reference="ija-lU-vqU"/>
+        <segue reference="LMc-Vn-Tz7"/>
     </inferredMetricsTieBreakers>
 </document>

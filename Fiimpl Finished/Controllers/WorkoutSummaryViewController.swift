@@ -23,8 +23,16 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
     var workoutExercises = [WorkoutExercise]()
     var exerciseCount : Int = 0
     var time : Int = 0
+    var isFavourite = false
+    
+    @IBOutlet weak var makeFavouriteOutlet: UIButton!
     
     override func viewDidLoad() {
+        
+        if isFavourite == true {
+            makeFavouriteOutlet.setTitle("Great Work!", for: .normal)
+            makeFavouriteOutlet.isEnabled = false
+        }
         
         super.viewDidLoad()
 
@@ -52,6 +60,7 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     @IBAction func favouriteButtonTapped(_ sender: Any) {
+        
     //set up alert controller
     let alertController : UIAlertController = UIAlertController(title: "Save as favourite", message: "Give your workout a name to save it", preferredStyle: .alert)
         
@@ -75,6 +84,7 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
             historyRecord.time = recordTime
             historyRecord.rounds = recordRounds
             
+            favouriteWorkout.workoutID = self.workoutID
             favouriteWorkout.favouriteWorkoutName = favouriteName
             favouriteWorkout.workoutReference = workout
             favouriteWorkout.workoutHistory.append(historyRecord)
@@ -95,6 +105,17 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
         present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func finishButtonTapped(_ sender: Any) {
+        
+        if isFavourite == true {
+            
+            
+            
+        } else {
+            performSegue(withIdentifier: "workoutSummaryToHome", sender: self)
+        }
+        
+    }
     
 
 }
