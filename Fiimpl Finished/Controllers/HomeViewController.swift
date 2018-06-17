@@ -45,6 +45,13 @@ class HomeViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     @IBAction func keepStreakButtonTapped(_ sender: Any) {
         let calendar = Calendar.current
         let streakObject = realm.objects(StreakObject.self).first
