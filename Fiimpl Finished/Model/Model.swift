@@ -18,7 +18,11 @@ class NotesObject: Object {
     
     @objc dynamic var note = ""
     
-}
+    override class func primaryKey() -> String? {
+        return "note"
+    }
+
+    }
 
 // MARK: Streak Objects
 

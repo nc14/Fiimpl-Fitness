@@ -111,7 +111,7 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
             
             
             let favouriteObject = (realm.object(ofType: FavouriteObject.self, forPrimaryKey: self.workoutID))!
-//            let favouriteHistoryRecord = (realm.object(ofType: FavouriteHistoryRecord.self, forPrimaryKey: self.workoutID))
+
             let favouriteHistoryRecord = FavouriteHistoryRecord()
             
             favouriteHistoryRecord.date = Date()
