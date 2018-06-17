@@ -166,6 +166,9 @@
                                         <state key="normal" title="Keep streak">
                                             <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="keepStreakButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dU3-zU-ACh"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmq-5k-Wn0">
                                         <rect key="frame" x="249.33333333333329" y="0.0" width="102.66666666666666" height="36"/>
@@ -200,6 +203,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="tJk-yg-ix1"/>
+                    <connections>
+                        <outlet property="currentStreakLabel" destination="fhQ-vh-B4b" id="sD5-4c-cOv"/>
+                        <outlet property="keepStreakOutlet" destination="sj4-UG-TyA" id="Bxx-fA-9s6"/>
+                        <outlet property="keepStreakTextLabel" destination="Gmq-5k-Wn0" id="8wH-HT-iX9"/>
+                        <outlet property="longestStreakLabel" destination="K98-Wj-FjP" id="wEu-68-cci"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="I4G-Kf-NGA" userLabel="Exercise Bank Gesture Recognizer">
