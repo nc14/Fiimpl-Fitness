@@ -30,13 +30,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-su-TFH">
-                                <rect key="frame" x="114" y="74" width="186" height="87.666666666666686"/>
+                                <rect key="frame" x="114" y="30.000000000000007" width="186" height="87.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KHT-su-TFH" secondAttribute="height" multiplier="163:77" id="CZ1-ui-vmz"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Lmh-jJ-81d" userLabel="Streak block">
-                                <rect key="frame" x="82.666666666666671" y="191.66666666666666" width="248.66666666666663" height="73.666666666666657"/>
+                                <rect key="frame" x="82.666666666666671" y="147.66666666666666" width="248.66666666666663" height="73.666666666666657"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="WOy-Fl-igd" userLabel="Current streak">
                                         <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="37"/>
@@ -63,7 +63,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="st0-Wi-YNI" userLabel="Button Block">
-                                <rect key="frame" x="31" y="315.33333333333331" width="352" height="220.66666666666669"/>
+                                <rect key="frame" x="31" y="271.33333333333331" width="352" height="220.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="33c-tw-elx" userLabel="row1 images">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="44"/>
@@ -158,7 +158,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-SE-eTu" userLabel="Keep block">
-                                <rect key="frame" x="31" y="586" width="352" height="36"/>
+                                <rect key="frame" x="31" y="542" width="352" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj4-UG-TyA">
                                         <rect key="frame" x="0.0" y="0.0" width="249.33333333333334" height="36"/>
@@ -245,51 +245,60 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="m6Z-p6-kXI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1rT-VW-xU5">
-                                <rect key="frame" x="10.333333333333343" y="64" width="393.33333333333326" height="672"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1rT-VW-xU5">
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseBankCell" id="YZq-Cg-zYa" customClass="ExerciseBankExerciseCell" customModule="Fiimpl_Finished" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseBankCell" rowHeight="100" id="YZq-Cg-zYa" customClass="ExerciseBankExerciseCell" customModule="Fiimpl_Finished" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YZq-Cg-zYa" id="nU4-Ar-UQs">
-                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Pkl-fq-ChX" userLabel="cell contents stack">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="99.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Exercise Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GsG-Ak-5TO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="197" height="43.666666666666664"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="236" height="99.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epC-OL-Iwe">
-                                                            <rect key="frame" x="197" y="0.0" width="48.666666666666657" height="43.666666666666664"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POB-ih-u8o">
-                                                            <rect key="frame" x="245.66666666666666" y="0.0" width="55.666666666666657" height="43.666666666666664"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fH-n0-cM0">
-                                                            <rect key="frame" x="301.33333333333331" y="0.0" width="92" height="43.666666666666664"/>
-                                                            <state key="normal" image="Trash"/>
-                                                            <connections>
-                                                                <action selector="deleteButtonTapped:" destination="YZq-Cg-zYa" eventType="touchUpInside" id="wYc-Pi-ejL"/>
-                                                            </connections>
-                                                        </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HvU-ko-Rh4">
+                                                            <rect key="frame" x="236" y="0.0" width="157.33333333333337" height="99.666666666666671"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epC-OL-Iwe">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="99.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POB-ih-u8o">
+                                                                    <rect key="frame" x="52.333333333333314" y="0.0" width="52.666666666666657" height="99.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fH-n0-cM0">
+                                                                    <rect key="frame" x="104.99999999999999" y="0.0" width="52.333333333333329" height="99.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="11"/>
+                                                                    <state key="normal" title="Delete">
+                                                                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="deleteButtonTapped:" destination="YZq-Cg-zYa" eventType="touchUpInside" id="wYc-Pi-ejL"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Pkl-fq-ChX" firstAttribute="width" secondItem="nU4-Ar-UQs" secondAttribute="width" id="Fb6-eF-L9R"/>
                                                 <constraint firstItem="Pkl-fq-ChX" firstAttribute="height" secondItem="nU4-Ar-UQs" secondAttribute="height" id="U7V-hU-8Kx"/>
+                                                <constraint firstItem="HvU-ko-Rh4" firstAttribute="width" secondItem="nU4-Ar-UQs" secondAttribute="width" multiplier="0.4" id="fme-zH-cmQ"/>
                                                 <constraint firstItem="Pkl-fq-ChX" firstAttribute="centerY" secondItem="nU4-Ar-UQs" secondAttribute="centerY" id="mCW-yg-20R"/>
                                                 <constraint firstItem="Pkl-fq-ChX" firstAttribute="centerX" secondItem="nU4-Ar-UQs" secondAttribute="centerX" id="oua-4W-OXF"/>
                                             </constraints>
@@ -347,33 +356,45 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="LTr-0w-1gi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H6a-br-eCz">
-                                <rect key="frame" x="10.333333333333343" y="64.000000000000028" width="393.33333333333326" height="441.66666666666674"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H6a-br-eCz">
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="441.66666666666669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutSummaryCell" id="dYS-Xw-Zw8" customClass="WorkoutSummaryCell" customModule="Fiimpl_Finished" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutSummaryCell" rowHeight="100" id="dYS-Xw-Zw8" customClass="WorkoutSummaryCell" customModule="Fiimpl_Finished" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dYS-Xw-Zw8" id="ofi-Hc-HdU">
-                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAM-gk-MMl">
-                                                    <rect key="frame" x="36.000000000000028" y="11.999999999999972" width="114" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-OG-M8I">
-                                                    <rect key="frame" x="233.00000000000003" y="10.999999999999972" width="76" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aE5-eN-PsT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Exercise Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAM-gk-MMl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="295" height="100"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-OG-M8I">
+                                                            <rect key="frame" x="295" y="0.0" width="98.333333333333314" height="100"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="tAM-gk-MMl" firstAttribute="width" secondItem="fCB-OG-M8I" secondAttribute="width" multiplier="3" id="wBT-FE-qIW"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="aE5-eN-PsT" firstAttribute="centerX" secondItem="dYS-Xw-Zw8" secondAttribute="centerX" id="04z-Bf-bVa"/>
+                                            <constraint firstItem="aE5-eN-PsT" firstAttribute="height" secondItem="dYS-Xw-Zw8" secondAttribute="height" id="erz-Z5-fpv"/>
+                                            <constraint firstItem="aE5-eN-PsT" firstAttribute="width" secondItem="dYS-Xw-Zw8" secondAttribute="width" id="lTt-41-NfF"/>
+                                            <constraint firstItem="aE5-eN-PsT" firstAttribute="centerY" secondItem="dYS-Xw-Zw8" secondAttribute="centerY" id="lb3-pr-dOU"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="exerciseName" destination="tAM-gk-MMl" id="pIa-Fj-Oce"/>
                                             <outlet property="totalReps" destination="fCB-OG-M8I" id="8x9-hm-dFG"/>
@@ -386,7 +407,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v6l-40-cmn" userLabel="Controls stack">
-                                <rect key="frame" x="31" y="555.66666666666663" width="352" height="111"/>
+                                <rect key="frame" x="31" y="511.66666666666674" width="352" height="111"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVO-uX-IkD">
                                         <rect key="frame" x="0.0" y="0.0" width="176" height="111"/>
@@ -449,41 +470,60 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="OqO-3r-cbX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S03-MN-cZ9">
-                                <rect key="frame" x="10.333333333333343" y="64.000000000000028" width="393.33333333333326" height="441.66666666666674"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S03-MN-cZ9">
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="441.66666666666669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutExerciseCell" id="9kw-RB-BAl" customClass="WorkoutCell" customModule="Fiimpl_Finished" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutExerciseCell" rowHeight="100" id="9kw-RB-BAl" customClass="WorkoutCell" customModule="Fiimpl_Finished" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9kw-RB-BAl" id="0LE-3p-1r0">
-                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="exerciseName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-3z-qqc">
-                                                    <rect key="frame" x="26.999999999999915" y="11.999999999999972" width="108" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e49-jL-gr9">
-                                                    <rect key="frame" x="192.00000000000003" y="11.999999999999972" width="39" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkq-XB-qtE">
-                                                    <rect key="frame" x="302" y="5.9999999999999716" width="38" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Swap"/>
-                                                    <connections>
-                                                        <action selector="swapButtonTapped:" destination="9kw-RB-BAl" eventType="touchUpInside" id="gPN-0C-2a7"/>
-                                                    </connections>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZRo-TR-NJW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-3z-qqc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="262.33333333333331" height="100"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y54-BI-VgV">
+                                                            <rect key="frame" x="262.33333333333331" y="0.0" width="131" height="100"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e49-jL-gr9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="33" height="100"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkq-XB-qtE">
+                                                                    <rect key="frame" x="33" y="0.0" width="98" height="100"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                                    <state key="normal" title="Swap">
+                                                                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="swapButtonTapped:" destination="9kw-RB-BAl" eventType="touchUpInside" id="gPN-0C-2a7"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="fi2-3z-qqc" firstAttribute="width" secondItem="Y54-BI-VgV" secondAttribute="width" multiplier="2" id="CbM-Ay-Nhp"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="ZRo-TR-NJW" firstAttribute="centerY" secondItem="9kw-RB-BAl" secondAttribute="centerY" id="IwG-6D-sZZ"/>
+                                            <constraint firstItem="ZRo-TR-NJW" firstAttribute="width" secondItem="9kw-RB-BAl" secondAttribute="width" id="ZiM-de-N4c"/>
+                                            <constraint firstItem="ZRo-TR-NJW" firstAttribute="height" secondItem="9kw-RB-BAl" secondAttribute="height" id="b4K-jm-tgR"/>
+                                            <constraint firstItem="ZRo-TR-NJW" firstAttribute="centerX" secondItem="9kw-RB-BAl" secondAttribute="centerX" id="h0L-jl-cnB"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="exerciseName" destination="fi2-3z-qqc" id="9tY-g2-OMq"/>
                                             <outlet property="repsNumber" destination="e49-jL-gr9" id="Xl7-iv-YhV"/>
@@ -497,7 +537,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GDT-69-QHw" userLabel="Controls stack">
-                                <rect key="frame" x="10.333333333333343" y="531.66666666666663" width="393.33333333333326" height="128.66666666666663"/>
+                                <rect key="frame" x="10.333333333333343" y="485.33333333333331" width="393.33333333333326" height="128.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="BUX-uO-afp" userLabel="Rounds stack">
                                         <rect key="frame" x="48" y="0.0" width="297.33333333333331" height="54.333333333333336"/>
@@ -527,7 +567,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="i43-59-cwQ" userLabel="Time stack">
-                                        <rect key="frame" x="72.000000000000014" y="74.333333333333371" width="249.33333333333337" height="54.333333333333343"/>
+                                        <rect key="frame" x="72.000000000000014" y="74.333333333333314" width="249.33333333333337" height="54.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRD-Oa-pj0">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="54.333333333333336"/>
@@ -591,26 +631,31 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ceQ-AV-qxm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmS-Zl-VAv">
-                                <rect key="frame" x="10.333333333333343" y="64" width="393.33333333333326" height="672"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmS-Zl-VAv">
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouriteNameCell" id="aYO-b2-y3v" customClass="FavouriteWorkoutNameCell" customModule="Fiimpl_Finished" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouriteNameCell" rowHeight="100" id="aYO-b2-y3v" customClass="FavouriteWorkoutNameCell" customModule="Fiimpl_Finished" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aYO-b2-y3v" id="ZTP-n5-hz1">
-                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favourite Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpJ-Z2-i7b">
-                                                    <rect key="frame" x="15.000000000000028" y="11" width="120" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpJ-Z2-i7b">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="100"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="fpJ-Z2-i7b" firstAttribute="centerX" secondItem="aYO-b2-y3v" secondAttribute="centerX" id="A3X-Of-Htu"/>
+                                            <constraint firstItem="fpJ-Z2-i7b" firstAttribute="height" secondItem="aYO-b2-y3v" secondAttribute="height" id="JN3-IA-l9E"/>
+                                            <constraint firstItem="fpJ-Z2-i7b" firstAttribute="width" secondItem="aYO-b2-y3v" secondAttribute="width" id="akD-3T-d4e"/>
+                                            <constraint firstItem="fpJ-Z2-i7b" firstAttribute="centerY" secondItem="aYO-b2-y3v" secondAttribute="centerY" id="hp3-5F-bpf"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="favouriteNameLabel" destination="fpJ-Z2-i7b" id="j21-aB-vuZ"/>
                                         </connections>
@@ -655,35 +700,49 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wok-lI-8hI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hEe-QG-AYn">
-                                <rect key="frame" x="10.333333333333343" y="64" width="393.33333333333326" height="672"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hEe-QG-AYn">
+                                <rect key="frame" x="10.333333333333343" y="20" width="393.33333333333326" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notebookCell" id="5ww-Jh-Q4h" customClass="NotesCell" customModule="Fiimpl_Finished" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notebookCell" rowHeight="100" id="5ww-Jh-Q4h" customClass="NotesCell" customModule="Fiimpl_Finished" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="393.33333333333326" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ww-Jh-Q4h" id="0KF-hB-8dz">
-                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333326" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krc-tT-ZAe">
-                                                    <rect key="frame" x="15.000000000000028" y="11" width="37" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BF-xV-6nv">
-                                                    <rect key="frame" x="302.00000000000011" y="-11" width="107" height="65"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <state key="normal" image="Trash"/>
-                                                    <connections>
-                                                        <action selector="deleteButtonTapped:" destination="5ww-Jh-Q4h" eventType="touchUpInside" id="OEh-ks-dpE"/>
-                                                    </connections>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="9AG-27-J8c">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krc-tT-ZAe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="295" height="100"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BF-xV-6nv">
+                                                            <rect key="frame" x="295" y="0.0" width="98.333333333333314" height="100"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                            <state key="normal" title="Delete">
+                                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="deleteButtonTapped:" destination="5ww-Jh-Q4h" eventType="touchUpInside" id="OEh-ks-dpE"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="krc-tT-ZAe" firstAttribute="width" secondItem="1BF-xV-6nv" secondAttribute="width" multiplier="3" id="IEf-1k-Hhb"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="9AG-27-J8c" firstAttribute="centerX" secondItem="5ww-Jh-Q4h" secondAttribute="centerX" id="JQ1-it-kNA"/>
+                                            <constraint firstItem="9AG-27-J8c" firstAttribute="centerY" secondItem="5ww-Jh-Q4h" secondAttribute="centerY" id="UVj-z2-diH"/>
+                                            <constraint firstItem="9AG-27-J8c" firstAttribute="height" secondItem="5ww-Jh-Q4h" secondAttribute="height" id="XbR-OF-NuY"/>
+                                            <constraint firstItem="9AG-27-J8c" firstAttribute="width" secondItem="5ww-Jh-Q4h" secondAttribute="width" id="kgQ-Iw-w4x"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="noteLabel" destination="krc-tT-ZAe" id="kzt-Ha-9FN"/>
                                         </connections>
@@ -735,7 +794,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5XW-wR-Fxo" userLabel="Name stack">
-                                <rect key="frame" x="31" y="74" width="352" height="110.33333333333331"/>
+                                <rect key="frame" x="31" y="29.999999999999993" width="352" height="110.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long do you want to train for?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbB-0W-GOK">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="33.666666666666664"/>
@@ -753,13 +812,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of workout?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nje-6U-We2">
-                                <rect key="frame" x="31" y="234.33333333333334" width="352" height="16.666666666666657"/>
+                                <rect key="frame" x="31" y="190.33333333333334" width="352" height="16.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z7e-fO-mFp" userLabel="repsStack">
-                                <rect key="frame" x="31" y="261" width="352" height="66.666666666666686"/>
+                                <rect key="frame" x="31" y="217" width="352" height="66.666666666666686"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="va0-S7-rRe">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="67.666666666666671"/>
@@ -775,7 +834,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tm1-yD-gLm">
-                                <rect key="frame" x="31" y="352.66666666666669" width="352" height="147.33333333333331"/>
+                                <rect key="frame" x="31" y="308.66666666666669" width="352" height="147.33333333333331"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Go">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -833,7 +892,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WKi-xy-GpL" userLabel="Name stack">
-                                <rect key="frame" x="31" y="74" width="352" height="110.33333333333331"/>
+                                <rect key="frame" x="31" y="29.999999999999993" width="352" height="110.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your exercise called?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHp-B4-Drv">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="33.666666666666664"/>
@@ -851,13 +910,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are the min and max no. of reps you want to set for this exercise?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqZ-eg-FIn">
-                                <rect key="frame" x="31" y="234.33333333333334" width="352" height="33.000000000000028"/>
+                                <rect key="frame" x="31" y="190.33333333333334" width="352" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-Ze-Imp" userLabel="repsStack">
-                                <rect key="frame" x="31" y="277.33333333333331" width="352" height="66.666666666666686"/>
+                                <rect key="frame" x="31" y="233.33333333333334" width="352" height="66.666666666666657"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Min. reps" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="VDn-IO-qwX">
                                         <rect key="frame" x="0.0" y="0.0" width="171" height="66.666666666666671"/>
@@ -881,7 +940,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6W8-3x-c0D" userLabel="Type Stack">
-                                <rect key="frame" x="31" y="394" width="352" height="111"/>
+                                <rect key="frame" x="31" y="350" width="352" height="111"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of exercise is it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZl-gC-eq1">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="16.666666666666668"/>
@@ -900,7 +959,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMP-7e-WHx">
-                                <rect key="frame" x="31" y="525" width="352" height="147.33333333333337"/>
+                                <rect key="frame" x="31" y="480.99999999999994" width="352" height="147.33333333333331"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Add exercise">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -966,7 +1025,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jyZ-ca-oU3" userLabel="Details stack">
-                                <rect key="frame" x="31" y="73.999999999999986" width="352" height="220.66666666666663"/>
+                                <rect key="frame" x="31" y="29.999999999999986" width="352" height="220.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This favourite workout is called" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFA-Aq-g5O">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="32.666666666666664"/>
@@ -981,7 +1040,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last time you managed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FK-AN-yWf">
-                                        <rect key="frame" x="0.0" y="75.333333333333343" width="352" height="32.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="75.333333333333329" width="352" height="32.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1007,13 +1066,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set time for workout" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgs-U9-U4F">
-                                <rect key="frame" x="31" y="329.66666666666669" width="352" height="16.666666666666686"/>
+                                <rect key="frame" x="31" y="285.66666666666669" width="352" height="16.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZUG-zc-YJ4" userLabel="timeStack">
-                                <rect key="frame" x="119.33333333333333" y="356.33333333333331" width="175.33333333333337" height="73.666666666666686"/>
+                                <rect key="frame" x="119.33333333333333" y="312.33333333333331" width="175.33333333333337" height="73.666666666666686"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Workout Time" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="T42-UT-9tC" userLabel="timeInput">
                                         <rect key="frame" x="0.0" y="0.0" width="175.33333333333334" height="73.666666666666671"/>
@@ -1028,7 +1087,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad1-4X-Z9e">
-                                <rect key="frame" x="31" y="455" width="352" height="55.333333333333314"/>
+                                <rect key="frame" x="31" y="411" width="352" height="55.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Go">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1097,7 +1156,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Trash" width="53" height="65"/>
         <image name="addRound" width="106" height="106"/>
         <image name="background" width="750" height="1334"/>
         <image name="exerciseBank" width="83" height="48"/>
@@ -1115,6 +1173,6 @@
         <segue reference="ADT-ng-dZD"/>
         <segue reference="3Ee-I2-rYc"/>
         <segue reference="vEA-5L-fGv"/>
-        <segue reference="9IO-bs-1ev"/>
+        <segue reference="LMc-Vn-Tz7"/>
     </inferredMetricsTieBreakers>
 </document>
