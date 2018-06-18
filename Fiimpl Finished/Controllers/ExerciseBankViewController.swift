@@ -68,16 +68,24 @@ class ExerciseBankViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
+    
     // set delete functionality where primary key is the exercise name
     func deleteButtonTapped(cell: ExerciseBankExerciseCell) {
-        let exerciseToBeDeleted = realm.object(ofType: ExerciseGeneratorObject.self, forPrimaryKey: cell.exerciseName.text)
+        
+        if let myIndexPath = exerciseBankTable.indexPath(for: cell)
+    
+        {
+            let exerciseToDelete = realm.objects(ExerciseGeneratorObject.self)[myIndexPath.row]
+
         do { try realm.write {
-            realm.delete(exerciseToBeDeleted!)
-            self.exerciseBankTable.reloadData()
-            }
-        } catch {
-            print ("error removing from favourites")
+                realm.delete(exerciseToDelete)
+                self.exerciseBankTable.reloadData()
+                }
+            } catch {
+                print ("error removing from favourites")
+                }
         }
     }
     
 }
+

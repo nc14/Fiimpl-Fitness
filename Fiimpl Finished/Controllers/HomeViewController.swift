@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
             keepStreakTextLabel.text = "The Keep Streak button is available once you've completed your first Fiimpl Workout"
         } else {
             keepStreakOutlet.isEnabled = true
-            keepStreakTextLabel.text = "Did you play a sport, go for a run or do soemthing else?  Keep your streak alive by tapping the button.  Remember you're only cheating yourself!"
+            keepStreakTextLabel.text = "Played sport, went for a run, did something else?  Keep your stream alive by tapping \("Keep Streak")"
         }
         super.viewDidLoad()
 
@@ -82,8 +82,8 @@ class HomeViewController: UIViewController {
         let currentStreak = streakObject?.currentStreak ?? 0
         let longestStreak = streakObject?.longestStreak ?? 0
         
-        currentStreakLabel.text = String(currentStreak)
-        longestStreakLabel.text = String(longestStreak)
+        currentStreakLabel.text = "Current Streak : \(String(currentStreak))"
+        longestStreakLabel.text = "Longest Streak : \(String(longestStreak))"
         
     }
     
@@ -110,4 +110,22 @@ class HomeViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func workoutTapped(_ sender: Any) {
+    
+    let exerciseBankCount = realm.objects(ExerciseGeneratorObject.self).count
+    print (exerciseBankCount)
+    if exerciseBankCount == 0 {
+    
+    let alert = UIAlertController(title: "You don't have any exercises yet", message: "You need to add some before you can set up a workout, do this now?", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Yes, add exercises", style: .default, handler: { action in self.performSegue(withIdentifier: "noExercisesYet", sender: self) }))
+    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+    
+    self.present(alert, animated: true)
+    
+    } else {
+    performSegue(withIdentifier: "goToSetupWorkout" , sender: self)
+        }
+    }
+
 }

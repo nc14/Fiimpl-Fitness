@@ -18,10 +18,15 @@ class NotesCell: UITableViewCell {
     @IBAction func deleteButtonTapped(_ sender: Any) {
         delegate?.deleteButtonTapped(cell: self)
     }
+    
+    @IBAction func editButtonTapped(_ sender: Any) {
+        delegate?.editButtonTapped(cell: self)
+    }
 }
     
     protocol NotesCellDelegate {
         func deleteButtonTapped(cell: NotesCell)
+        func editButtonTapped(cell: NotesCell)
     }
 
 
@@ -64,16 +69,55 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // set delete functionality
     func deleteButtonTapped(cell: NotesCell) {
-        let noteToBeDeleted = realm.object(ofType: NotesObject.self, forPrimaryKey: cell.noteLabel.text)
-        
-        do { try realm.write {
-            realm.delete(noteToBeDeleted!)
+        if let myIndexPath = notesTableOutlet.indexPath(for: cell)
+            
+        {
+            let noteToDelete = realm.objects(NotesObject.self)[myIndexPath.row]
+            
+            do { try realm.write {
+                realm.delete(noteToDelete)
+                self.notesTableOutlet.reloadData()
+                }
+            } catch {
+                print ("error removing note")
             }
-        } catch {
-            print ("error removing from favourites")
         }
-        self.notesTableOutlet.reloadData()
     }
+    
+    func editButtonTapped(cell: NotesCell) {
+        
+        if let myIndexPath = notesTableOutlet.indexPath(for: cell) {
+        
+        let selectedNote = realm.objects(NotesObject.self)[myIndexPath.row]
+
+        let alertController: UIAlertController = UIAlertController(title: "Update note", message: "Update your note below", preferredStyle: .alert)
+
+        alertController.addTextField { textField in
+            textField.placeholder = selectedNote.note
+        }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+                print ("cancelled")
+            }
+            let confirmAction = UIAlertAction(title: "Done", style: .default) { _ in
+
+                let newText = alertController.textFields?.first?.text ?? ("Empty")
+
+                do {
+                    try self.realm.write {
+                    selectedNote.note = newText
+                }
+            } catch {
+                print ("Error adding note")
+            }
+            self.notesTableOutlet.reloadData()
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(confirmAction)
+
+        // Present to user
+        present(alertController, animated: true, completion: nil)
+            }
+        }
     
     @IBAction func addButtonTapped(_ sender: Any) {
         
@@ -108,5 +152,5 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Present to user
         present(alertController, animated: true, completion: nil)
     }
-        
+    
 }
