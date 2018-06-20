@@ -63,6 +63,8 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.delegate = self
         
         cell.noteLabel.text = notes[indexPath.row].note
+        cell.selectionStyle = .none
+
         
         return cell
     }

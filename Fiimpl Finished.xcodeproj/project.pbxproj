@@ -22,6 +22,7 @@
 		D9EA6E8A20D2693900EBEBCE /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EA6E8920D2693900EBEBCE /* WorkoutViewController.swift */; };
 		D9EA6E8C20D2853C00EBEBCE /* WorkoutSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EA6E8B20D2853C00EBEBCE /* WorkoutSummaryViewController.swift */; };
 		D9F0013720D6B13F00368653 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0013620D6B13F00368653 /* NotesViewController.swift */; };
+		D9F0013B20D80FD300368653 /* FavouriteExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F0013A20D80FD300368653 /* FavouriteExerciseDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D9EA6E8920D2693900EBEBCE /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		D9EA6E8B20D2853C00EBEBCE /* WorkoutSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryViewController.swift; sourceTree = "<group>"; };
 		D9F0013620D6B13F00368653 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		D9F0013A20D80FD300368653 /* FavouriteExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteExerciseDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				D943730020D40B7300BCEA09 /* FavouritesViewController.swift */,
 				D943730220D4185900BCEA09 /* FavouriteDetailViewController.swift */,
 				D9F0013620D6B13F00368653 /* NotesViewController.swift */,
+				D9F0013A20D80FD300368653 /* FavouriteExerciseDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				D9F0013720D6B13F00368653 /* NotesViewController.swift in Sources */,
 				D9EA6E8C20D2853C00EBEBCE /* WorkoutSummaryViewController.swift in Sources */,
 				D985D6D020CE9F9D00C74D7F /* Model.swift in Sources */,
+				D9F0013B20D80FD300368653 /* FavouriteExerciseDetailViewController.swift in Sources */,
 				D9EA6E8A20D2693900EBEBCE /* WorkoutViewController.swift in Sources */,
 				D943730320D4185900BCEA09 /* FavouriteDetailViewController.swift in Sources */,
 				D9EA6E8820D2692900EBEBCE /* SetupWorkoutViewController.swift in Sources */,

@@ -56,6 +56,8 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
         let exercises = workoutExercises[indexPath.row]
         cell.exerciseName.text = exercises.name
         cell.totalReps.text = String(exercises.reps)
+        cell.selectionStyle = .none
+
         return cell
     }
     

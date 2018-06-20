@@ -63,6 +63,8 @@ class ExerciseBankViewController: UIViewController, UITableViewDelegate, UITable
         cell.exerciseName.text = exercise.name
         cell.minReps.text = String(exercise.minReps)
         cell.maxReps.text = String(exercise.maxReps)
+        cell.selectionStyle = .none
+
         
         return cell
         

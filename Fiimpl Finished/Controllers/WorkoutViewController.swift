@@ -74,6 +74,8 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.swapButton.isEnabled = swapButtonEnabled
         cell.exerciseName.text = exerciseName.name
         cell.repsNumber.text = String(exerciseName.reps)
+        cell.selectionStyle = .none
+
         return cell
     }
     
