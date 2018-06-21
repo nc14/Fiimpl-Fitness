@@ -39,6 +39,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     var rounds = 0
     var isTimerRunning = false
     var workoutTimerObject = Timer()
+    var firstTime = false
     
     var selectedWorkoutExerciseArray = [WorkoutExercise]()
     var selectedWorkoutTime : Int = 0
@@ -54,9 +55,14 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         timeLabel.text = timeString(time: TimeInterval(selectedWorkoutTime))
         roundsLabel.text = String(0)
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        
+        let streakObject = realm.objects(StreakObject.self)
+        if streakObject.count == 0 {
+            firstTime = true
+        } else {
+            firstTime = false
+        }
+        }
     
     //MARK: Table set up
     
@@ -134,7 +140,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     let alert = UIAlertController(title: "Workout Done", message: "Save and go to summary", preferredStyle: .alert)
     let saveWorkoutAction = UIAlertAction(title: "Save", style: .default) { (UIAlertAction) in
         self.saveToRealm()
-//        self.updateStreak()
+        self.updateStreak()
         self.performSegue(withIdentifier: "goToWorkoutSummary", sender: self)
     }
     
@@ -152,7 +158,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     
         let alert = UIAlertController(title: "Nice work", message: "Go to summary to save", preferredStyle: .alert)
         let saveWorkoutAction = UIAlertAction(title: "Go to summary", style: .default) { (UIAlertAction) in
-            //        self.updateStreak()
+            self.updateStreak()
             self.performSegue(withIdentifier: "goToWorkoutSummary", sender: self)
         }
         
@@ -198,7 +204,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         let calendar = Calendar.current
         let streakObject = realm.objects(StreakObject.self).first
         let currentStreak = streakObject?.currentStreak ?? 0
-        let bestStreak = streakObject?.longestStreak
+        let bestStreak = streakObject?.longestStreak ?? 0
         let newStreak = (currentStreak) + 1
         let lastDate = streakObject?.lastWorkoutDate ?? Date()
         // Replace the hour (time) of both dates with 00:00
@@ -206,7 +212,18 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         let date2 = calendar.startOfDay(for: Date())
         
         let daysBetween = calendar.dateComponents([.day], from: date1, to: date2)
-        print (daysBetween)
+
+        if firstTime == true {
+            let firstStreakObject = StreakObject()
+                firstStreakObject.lastWorkoutDate = date2
+                firstStreakObject.currentStreak = 1
+                firstStreakObject.longestStreak = 1
+            
+                try!
+                realm.write {
+                realm.add(firstStreakObject)
+                }
+        } else {
         
         try! realm.write {
             streakObject?.currentStreak = newStreak
@@ -223,10 +240,11 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
                 streakObject?.lastWorkoutDate = Date()
             }
         }
-        if newStreak > bestStreak! {
+        if newStreak > bestStreak {
             try! realm.write {
                 streakObject?.longestStreak = newStreak
             }
+        }
         }
     }
     

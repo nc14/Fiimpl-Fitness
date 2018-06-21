@@ -23,6 +23,9 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var addExerciseButtonOutlet: UIButton!
     
+    @IBOutlet weak var addExerciseInfoLabel: UILabel!
+    
+    
 
     //MARK: Delegates
     
@@ -32,6 +35,7 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
         minimumReps.delegate = self
         maximumReps.delegate = self
         addExerciseButtonOutlet.isEnabled = false
+        addExerciseInfoLabel.isHidden = true
         
     super.viewDidLoad()
 
@@ -58,6 +62,9 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
         newExercise.type = exerciseType.titleForSegment(at: exerciseType.selectedSegmentIndex)!
         
         do {
+            addExerciseInfoLabel.isHidden = false
+            addExerciseInfoLabel.text = ("\(exerciseName!) added")
+           
             try realm.write {
                 realm.add(newExercise)
             }
