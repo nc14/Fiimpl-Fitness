@@ -351,7 +351,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ReC-I1-8t1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="zGg-xl-Unp">
+                    <navigationItem key="navigationItem" title="Exercise Bank" id="zGg-xl-Unp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qds-81-d4n">
                             <connections>
                                 <segue destination="DeI-Rw-nqf" kind="show" id="5RC-ro-uuA"/>
@@ -471,7 +471,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oLY-Tj-pda"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="k69-pO-inH"/>
+                    <navigationItem key="navigationItem" title="Workout Summary" id="k69-pO-inH"/>
                     <connections>
                         <outlet property="makeFavouriteOutlet" destination="LVO-uX-IkD" id="Fts-nC-BCJ"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="workoutSummaryToHome" id="LMc-Vn-Tz7"/>
@@ -843,7 +843,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UUx-NA-aZv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="iDS-Ga-3F5">
+                    <navigationItem key="navigationItem" title="Notebook" id="iDS-Ga-3F5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bnj-F5-p5j">
                             <connections>
                                 <action selector="addButtonTapped:" destination="x60-K8-fIc" id="QeW-B3-xko"/>
@@ -858,7 +858,7 @@
             </objects>
             <point key="canvasLocation" x="1595.625" y="577.81690140845069"/>
         </scene>
-        <!--View Controller-->
+        <!--FAQs-->
         <scene sceneID="DkD-qS-xhO">
             <objects>
                 <viewController id="cer-mB-w5q" sceneMemberID="viewController">
@@ -870,7 +870,7 @@
                                 <rect key="frame" x="0.0" y="27" width="375" height="812"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mej-hB-zA8">
-                                <rect key="frame" x="9.3333333333333428" y="105.33333333333331" width="356.33333333333326" height="655.33333333333348"/>
+                                <rect key="frame" x="9.3333333333333428" y="105.33333333333331" width="356.33333333333326" height="655.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="What is Fiimpl?  ">
@@ -1039,6 +1039,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fjw-Sf-0vS"/>
                     </view>
+                    <navigationItem key="navigationItem" title="FAQs" id="MaF-Db-2G0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMB-No-NHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1069,7 +1070,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -1130,7 +1131,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J0k-Hi-EMj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Oxk-2D-DHk"/>
+                    <navigationItem key="navigationItem" title="Setup Workout" id="Oxk-2D-DHk"/>
                     <connections>
                         <outlet property="goButtonOutlet" destination="tm1-yD-gLm" id="E3k-UU-jEt"/>
                         <outlet property="timeInputField" destination="HbQ-LH-l3h" id="4eQ-su-Bwm"/>
@@ -1185,14 +1186,14 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Max. exercises" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-X0-qOQ">
                                         <rect key="frame" x="164.66666666666663" y="0.0" width="154.33333333333337" height="75.333333333333329"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -1273,7 +1274,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Eab-zE-9Wf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="UQQ-HD-9Am"/>
+                    <navigationItem key="navigationItem" title="Add Exercise" id="ilp-UF-eGH"/>
                     <connections>
                         <outlet property="addExerciseButtonOutlet" destination="TMP-7e-WHx" id="HiS-TO-JJc"/>
                         <outlet property="addExerciseInfoLabel" destination="bo8-uK-8Sr" id="dfY-Vd-YZh"/>
@@ -1353,7 +1354,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
