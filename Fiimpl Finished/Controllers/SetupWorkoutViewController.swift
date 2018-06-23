@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class SetupWorkoutViewController: UIViewController {
+class SetupWorkoutViewController: UIViewController, UITextFieldDelegate {
 
     var selectedWorkout : FinalWorkout!
     
@@ -18,6 +18,8 @@ class SetupWorkoutViewController: UIViewController {
     @IBOutlet weak var goButtonOutlet: UIButton!
     
     override func viewDidLoad() {
+        
+        timeInputField.delegate = self
         
         super.viewDidLoad()
 
@@ -61,6 +63,7 @@ class SetupWorkoutViewController: UIViewController {
         performSegue(withIdentifier: "goToWorkout", sender: self )
     }
     
+    
     //MARK: Go Button
     
     @IBAction func goButtonTapped(_ sender: Any) {
@@ -79,5 +82,35 @@ class SetupWorkoutViewController: UIViewController {
         
     }
     
+    //Form validation
     
+    //only allow numbers in reps fields
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == timeInputField {
+            
+            let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
+            
+            
+            return string.rangeOfCharacter(from: invalidCharacters, options: [], range: string.startIndex ..< string.endIndex) == nil
+        }
+        return true
+    }
+    
+    //disable button if not all fields completed when finished editing
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if timeInputField.text?.isEmpty == false {
+            goButtonOutlet.isEnabled = true
+        } else {
+            goButtonOutlet.isEnabled = false
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        self.view.endEditing(true)
+     
+        return true
+    }
 }

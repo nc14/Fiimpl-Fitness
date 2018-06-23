@@ -63,7 +63,7 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
         
         do {
             addExerciseInfoLabel.isHidden = false
-            addExerciseInfoLabel.text = ("\(exerciseName!) added")
+            addExerciseInfoLabel.text = ("Exercise saved!")
            
             try realm.write {
                 realm.add(newExercise)
@@ -106,13 +106,13 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == exerciseName {
-            minimumReps.becomeFirstResponder()
+            self.minimumReps.becomeFirstResponder()
         }
         else if textField == minimumReps {
-            maximumReps.becomeFirstResponder()
+            self.maximumReps.becomeFirstResponder()
         }
-        else {
-            resignFirstResponder()
+        else if textField == maximumReps {
+            self.view.endEditing(true)
         }
         
         if minimumReps.text?.isEmpty == false && maximumReps.text?.isEmpty == false && exerciseName.text?.isEmpty == false {
