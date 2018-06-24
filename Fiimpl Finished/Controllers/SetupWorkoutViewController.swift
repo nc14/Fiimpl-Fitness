@@ -20,6 +20,7 @@ class SetupWorkoutViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         
         timeInputField.delegate = self
+        goButtonOutlet.isEnabled = false
         
         super.viewDidLoad()
 

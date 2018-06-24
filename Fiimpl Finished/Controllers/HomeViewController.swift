@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
             keepStreakTextLabel.text = "The Keep Streak button is available once you've completed your first Fiimpl Workout"
         } else {
             keepStreakOutlet.isEnabled = true
-            keepStreakTextLabel.text = "Played sport, went for a run, did something else?  Keep your stream alive by tapping \("Keep Streak")"
+            keepStreakTextLabel.text = "Played sport, went for a run, did something else?  Keep your streak alive by tapping \("Keep Streak")"
         }
         super.viewDidLoad()
 

@@ -91,6 +91,13 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    //clear 'notification label' when text field starts editing for adding multiple
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+
+        addExerciseInfoLabel.text = ("")
+        
+    }
+    
     //disable button if not all fields completed when finished editing
     
     func textFieldDidEndEditing(_ textField: UITextField) {
