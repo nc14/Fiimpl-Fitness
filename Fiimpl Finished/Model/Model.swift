@@ -131,7 +131,7 @@ class WorkoutExercise: Object {
     static var repeaterWorkout: WorkoutGenerator {
         return WorkoutGenerator(
             minCount: 1,
-            maxCount: 2
+            maxCount: 3
         )
         
     }
@@ -139,7 +139,7 @@ class WorkoutExercise: Object {
     static var varietyWorkout: WorkoutGenerator {
         return WorkoutGenerator(
             minCount: 6,
-            maxCount: 10
+            maxCount: 9
         )
         
     }

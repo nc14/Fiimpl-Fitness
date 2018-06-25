@@ -37,6 +37,7 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
         addExerciseButtonOutlet.isEnabled = false
         addExerciseInfoLabel.isHidden = true
         
+        
     super.viewDidLoad()
 
     }
