@@ -101,7 +101,6 @@ class HomeViewController: UIViewController {
         let date2 = calendar.startOfDay(for: Date())
         
         let daysBetween = calendar.dateComponents([.day], from: date1, to: date2)
-        print (daysBetween)
         
         if (daysBetween.day) != 0 {
             try! realm.write {
@@ -114,7 +113,6 @@ class HomeViewController: UIViewController {
     @IBAction func workoutTapped(_ sender: Any) {
     
     let exerciseBankCount = realm.objects(ExerciseGeneratorObject.self).count
-    print (exerciseBankCount)
     if exerciseBankCount == 0 {
     
     let alert = UIAlertController(title: "You don't have any exercises yet", message: "You need to add some before you can set up a workout, do this now?", preferredStyle: .alert)

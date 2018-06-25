@@ -17,24 +17,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        
+    //bundle default realm with initial install
+        
+        let defaultPath = Realm.Configuration.defaultConfiguration.fileURL?.path
+        let path = Bundle.main.path(forResource: "fiimpl-compacted", ofType: "realm")
+        if !FileManager.default.fileExists(atPath: defaultPath!), let bundledPath = path {
+            do {
+                try FileManager.default.copyItem(atPath: bundledPath, toPath: defaultPath!)
+            } catch {
+                print("Error copying pre-populated Realm \(error)")
+            }
+        }
+        
+        //realm migration block for schema updates
+        
         var config = Realm.Configuration(
             
-            // Set the new schema version. This must be greater than the previously used
-            // version (if you've never set a schema version before, the version is 0).
-            
+            //current schema version
             schemaVersion: 11,
-            
-            // Set the block which will be called automatically when opening a Realm with
-            // a schema version lower than the one set above
             
             migrationBlock: { migration, oldSchemaVersion in
                 
-                // We haven’t migrated anything yet, so oldSchemaVersion == 0
-                
                 if (oldSchemaVersion < 0) {
-                    // Nothing to do!
-                    // Realm will automatically detect new properties and removed properties
-                    // And will update the schema on disk automatically
+                   
                 }
         })
         
@@ -42,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config = Realm.Configuration()
         config.deleteRealmIfMigrationNeeded = true
         //        let location = Realm.Configuration.defaultConfiguration.fileURL
+        
+        
         
         return true
     }

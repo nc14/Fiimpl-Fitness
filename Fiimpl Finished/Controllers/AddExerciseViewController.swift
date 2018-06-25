@@ -67,7 +67,7 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
             addExerciseInfoLabel.text = ("Exercise saved!")
            
             try realm.write {
-                realm.add(newExercise)
+                realm.add(newExercise, update: true)
             }
         } catch {
             //add UI Alert Controller here to present error

@@ -11,6 +11,7 @@
 		D9009DD620D0611C0020F2AE /* ExerciseBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9009DD520D0611C0020F2AE /* ExerciseBankViewController.swift */; };
 		D943730120D40B7300BCEA09 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943730020D40B7300BCEA09 /* FavouritesViewController.swift */; };
 		D943730320D4185900BCEA09 /* FavouriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943730220D4185900BCEA09 /* FavouriteDetailViewController.swift */; };
+		D947667620E17ACF004F4629 /* fiimpl-compacted.realm in Resources */ = {isa = PBXBuildFile; fileRef = D947667520E17ACF004F4629 /* fiimpl-compacted.realm */; };
 		D965F7D220C9BF7C0063A09A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965F7D120C9BF7C0063A09A /* AppDelegate.swift */; };
 		D965F7D720C9BF7C0063A09A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965F7D520C9BF7C0063A09A /* Main.storyboard */; };
 		D965F7D920C9BF7C0063A09A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D965F7D820C9BF7C0063A09A /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		D9009DD520D0611C0020F2AE /* ExerciseBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseBankViewController.swift; sourceTree = "<group>"; };
 		D943730020D40B7300BCEA09 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		D943730220D4185900BCEA09 /* FavouriteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDetailViewController.swift; sourceTree = "<group>"; };
+		D947667520E17ACF004F4629 /* fiimpl-compacted.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fiimpl-compacted.realm"; sourceTree = "<group>"; };
 		D965F7CE20C9BF7C0063A09A /* Fiimpl Finished.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fiimpl Finished.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D965F7D120C9BF7C0063A09A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D965F7D620C9BF7C0063A09A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		D985D6CE20CE9F8E00C74D7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D947667520E17ACF004F4629 /* fiimpl-compacted.realm */,
 				D985D6CF20CE9F9D00C74D7F /* Model.swift */,
 			);
 			path = Model;
@@ -198,6 +201,7 @@
 				D965F7DC20C9BF7C0063A09A /* LaunchScreen.storyboard in Resources */,
 				D965F7D920C9BF7C0063A09A /* Assets.xcassets in Resources */,
 				D965F7D720C9BF7C0063A09A /* Main.storyboard in Resources */,
+				D947667620E17ACF004F4629 /* fiimpl-compacted.realm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
