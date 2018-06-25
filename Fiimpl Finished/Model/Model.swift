@@ -135,14 +135,6 @@ class WorkoutExercise: Object {
         )
         
     }
-    
-    static var varietyWorkout: WorkoutGenerator {
-        return WorkoutGenerator(
-            minCount: 6,
-            maxCount: 9
-        )
-        
-    }
 
 }
 

@@ -566,7 +566,7 @@
                                 <rect key="frame" x="9.3333333333333428" y="557.66666666666663" width="356.33333333333326" height="142"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="BUX-uO-afp" userLabel="Rounds stack">
-                                        <rect key="frame" x="26.666666666666657" y="0.0" width="303" height="61"/>
+                                        <rect key="frame" x="25.666666666666657" y="0.0" width="305.33333333333337" height="61"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. rounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-LS-pxK">
                                                 <rect key="frame" x="0.0" y="0.0" width="99" height="61"/>
@@ -584,12 +584,16 @@
                                                     <action selector="addRoundTapped:" destination="dAS-1m-QVa" eventType="touchUpInside" id="nLY-f6-9L0"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esU-w5-KcT">
-                                                <rect key="frame" x="269.33333333333331" y="0.0" width="33.666666666666686" height="61"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4c-Ka-rdu">
+                                                <rect key="frame" x="269.33333333333331" y="0.0" width="36" height="61"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                                                <state key="normal" title="Quit">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="quitButtonTapped:" destination="dAS-1m-QVa" eventType="touchUpInside" id="rVX-3R-bi6"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="i43-59-cwQ" userLabel="Time stack">
@@ -624,7 +628,7 @@
                             <constraint firstItem="GDT-69-QHw" firstAttribute="top" secondItem="S03-MN-cZ9" secondAttribute="bottom" multiplier="1.05:1" id="C1J-0B-YMe"/>
                             <constraint firstItem="S03-MN-cZ9" firstAttribute="top" secondItem="EoC-zr-V3G" secondAttribute="top" id="HFV-nj-t3C"/>
                             <constraint firstItem="OqO-3r-cbX" firstAttribute="top" secondItem="Afg-fg-gwM" secondAttribute="top" id="In7-5M-uLy"/>
-                            <constraint firstItem="S03-MN-cZ9" firstAttribute="height" secondItem="Afg-fg-gwM" secondAttribute="height" multiplier="0.6" id="SUt-zM-3ak" userLabel="Workout Table View Height"/>
+                            <constraint firstItem="S03-MN-cZ9" firstAttribute="height" secondItem="Afg-fg-gwM" secondAttribute="height" multiplier="0.6" id="QLy-Ih-aps"/>
                             <constraint firstItem="OqO-3r-cbX" firstAttribute="leading" secondItem="EoC-zr-V3G" secondAttribute="leading" id="VCZ-Et-kcr"/>
                             <constraint firstItem="S03-MN-cZ9" firstAttribute="width" secondItem="Afg-fg-gwM" secondAttribute="width" multiplier="0.95" id="Vvc-yu-5si"/>
                             <constraint firstItem="GDT-69-QHw" firstAttribute="width" secondItem="Afg-fg-gwM" secondAttribute="width" multiplier="0.95" id="gNq-1R-91j"/>
@@ -635,13 +639,12 @@
                         <viewLayoutGuide key="safeArea" id="EoC-zr-V3G"/>
                     </view>
                     <connections>
-                        <outlet property="WorkoutTableViewHeight" destination="SUt-zM-3ak" id="p15-21-W3D"/>
                         <outlet property="roundsLabel" destination="RgQ-LS-pxK" id="EHw-RM-k4f"/>
-                        <outlet property="tableViewHeight" destination="SUt-zM-3ak" id="eML-3P-jnA"/>
                         <outlet property="timeLabel" destination="yjo-Ov-FPR" id="els-95-nDf"/>
                         <outlet property="timerControlOutlet" destination="iRD-Oa-pj0" id="HkI-mN-Odo"/>
                         <outlet property="workoutTableView" destination="S03-MN-cZ9" id="QKU-FK-hcT"/>
                         <segue destination="7CL-FU-wHo" kind="show" identifier="goToWorkoutSummary" id="qay-ya-K45"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="quitWorkout" id="6X9-ap-jVW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRl-F7-HkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1090,7 +1093,6 @@
                                         <segments>
                                             <segment title="1 - 3"/>
                                             <segment title="3 - 6"/>
-                                            <segment title="6 - 9"/>
                                         </segments>
                                     </segmentedControl>
                                 </subviews>
@@ -1173,7 +1175,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -1531,6 +1533,6 @@
         <segue reference="ADT-ng-dZD"/>
         <segue reference="pty-r3-iqh"/>
         <segue reference="h4y-y4-kAE"/>
-        <segue reference="LMc-Vn-Tz7"/>
+        <segue reference="6X9-ap-jVW"/>
     </inferredMetricsTieBreakers>
 </document>

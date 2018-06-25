@@ -58,27 +58,16 @@ class SetupWorkoutViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    func varietyWorkout() {
-        let finalWorkoutTime = Int(timeInputField.text!)
-        self.selectedWorkout = FinalWorkout(generatedWorkout: WorkoutGenerator.varietyWorkout.generate(), timeForWorkout: finalWorkoutTime!)
-        performSegue(withIdentifier: "goToWorkout", sender: self )
-    }
-    
-    
     //MARK: Go Button
     
     @IBAction func goButtonTapped(_ sender: Any) {
         
-        if workoutTypeControl.titleForSegment(at: workoutTypeControl.selectedSegmentIndex) == "Standard" {
+        if workoutTypeControl.titleForSegment(at: workoutTypeControl.selectedSegmentIndex) == "3 - 6" {
             standardWorkout()
         }
         
-        if workoutTypeControl.titleForSegment(at: workoutTypeControl.selectedSegmentIndex) == "Repeater" {
+        if workoutTypeControl.titleForSegment(at: workoutTypeControl.selectedSegmentIndex) == "1 - 3" {
             repeaterWorkout()
-        }
-        
-        if workoutTypeControl.titleForSegment(at: workoutTypeControl.selectedSegmentIndex) == "Variety" {
-            varietyWorkout()
         }
         
     }

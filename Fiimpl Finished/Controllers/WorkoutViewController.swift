@@ -197,6 +197,21 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    //Quit Button Code
+    
+    @IBAction func quitButtonTapped(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Quit workout?", message: "Are you sure you want to quit?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes, quit", style: .default, handler: { action in self.performSegue(withIdentifier: "quitWorkout", sender: self) }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+            
+        }
+    
+    
     //update Streak function
     
     func updateStreak() {
