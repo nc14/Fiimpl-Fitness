@@ -54,7 +54,7 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         cell.delegate = self
         
-        cell.favouriteNameLabel.text = "\(favouriteWorkouts[indexPath.row].favouriteWorkoutName) - tap to view"
+        cell.favouriteNameLabel.text = favouriteWorkouts[indexPath.row].favouriteWorkoutName
         cell.selectionStyle = .none
 
         return cell

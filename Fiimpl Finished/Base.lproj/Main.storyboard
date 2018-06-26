@@ -687,6 +687,7 @@
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy6-TU-SpI">
                                                                     <rect key="frame" x="0.0" y="0.0" width="71" height="100"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                                                     <state key="normal" title="Go">
                                                                         <color key="titleColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </state>
@@ -743,7 +744,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u9c-DU-j0e"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="NC2-P9-sLE"/>
+                    <navigationItem key="navigationItem" title="Favourites" id="NC2-P9-sLE"/>
                     <connections>
                         <outlet property="favouritesTableOutlet" destination="fmS-Zl-VAv" id="J4C-nc-ppL"/>
                         <segue destination="UEs-DS-dr4" kind="show" identifier="goToSetupFavourite" id="B3V-pf-zBs"/>
@@ -875,7 +876,7 @@
                                 <rect key="frame" x="0.0" y="27" width="375" height="812"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mej-hB-zA8">
-                                <rect key="frame" x="9.3333333333333428" y="105.33333333333331" width="356.33333333333326" height="655.33333333333326"/>
+                                <rect key="frame" x="9.3333333333333428" y="105.33333333333331" width="356.33333333333326" height="655.33333333333348"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="What is Fiimpl?  ">
@@ -1176,7 +1177,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -1363,7 +1364,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -1405,7 +1406,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WEN-Sr-XXw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="XHD-9u-ihB"/>
+                    <navigationItem key="navigationItem" title="Setup Favourite" id="XHD-9u-ihB"/>
                     <connections>
                         <outlet property="goButtonOutlet" destination="ad1-4X-Z9e" id="cui-Ww-tKA"/>
                         <outlet property="previousRoundsLabel" destination="oWH-zu-OXZ" id="iCk-zk-hC9"/>
@@ -1464,18 +1465,21 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="356.33333333333331" height="60"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Anu-nX-crC">
-                                                            <rect key="frame" x="0.0" y="0.0" width="267.66666666666669" height="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="267.33333333333331" height="60"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeR-hr-uwG">
-                                                            <rect key="frame" x="267.66666666666669" y="0.0" width="88.666666666666686" height="60"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeR-hr-uwG">
+                                                            <rect key="frame" x="267.33333333333331" y="0.0" width="89" height="60"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Anu-nX-crC" firstAttribute="width" secondItem="BeR-hr-uwG" secondAttribute="width" multiplier="3" id="DtF-9c-PCp"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1511,7 +1515,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lY5-YV-9QR"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="4aD-8T-hUl"/>
+                    <navigationItem key="navigationItem" title="Favourite Detail" id="4aD-8T-hUl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ump-eY-FEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1533,7 +1537,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Ewi-xl-6sC"/>
         <segue reference="ADT-ng-dZD"/>
-        <segue reference="pty-r3-iqh"/>
+        <segue reference="3Ee-I2-rYc"/>
         <segue reference="h4y-y4-kAE"/>
         <segue reference="9IO-bs-1ev"/>
     </inferredMetricsTieBreakers>

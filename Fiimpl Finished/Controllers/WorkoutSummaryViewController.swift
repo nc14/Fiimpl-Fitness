@@ -55,7 +55,7 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
         
         let exercises = workoutExercises[indexPath.row]
         cell.exerciseName.text = exercises.name
-        cell.totalReps.text = String(exercises.reps)
+        cell.totalReps.text = String(exercises.reps * totalRounds)
         cell.selectionStyle = .none
 
         return cell
@@ -95,6 +95,7 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
                 try realm.write {
                     realm.add(favouriteWorkout)
                     workout.favourite = true
+                    self.performSegue(withIdentifier: "workoutSummaryToHome", sender: self)
                 }
             } catch {
                 print ("Error adding favourite")
