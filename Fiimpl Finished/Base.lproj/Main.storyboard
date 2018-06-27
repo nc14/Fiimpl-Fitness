@@ -1144,11 +1144,24 @@
                     <connections>
                         <outlet property="goButtonOutlet" destination="tm1-yD-gLm" id="E3k-UU-jEt"/>
                         <outlet property="timeInputField" destination="HbQ-LH-l3h" id="4eQ-su-Bwm"/>
+                        <outlet property="toolbarOutlet" destination="x1m-t8-ABe" id="cDJ-hP-Heg"/>
                         <outlet property="workoutTypeControl" destination="va0-S7-rRe" id="rjV-c5-KAj"/>
                         <segue destination="dAS-1m-QVa" kind="show" identifier="goToWorkout" id="pty-r3-iqh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQI-D1-dCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="x1m-t8-ABe">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="xan-lH-LOZ"/>
+                        <barButtonItem systemItem="done" id="Tye-WI-R3V">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="x47-Ea-2rl" id="KUf-7S-KEu"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="-1991" y="-139"/>
         </scene>
@@ -1195,14 +1208,14 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Max. exercises" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-X0-qOQ">
                                         <rect key="frame" x="164.66666666666663" y="0.0" width="154.33333333333337" height="71"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -1292,9 +1305,22 @@
                         <outlet property="exerciseType" destination="QTI-IG-f8J" id="dY3-N3-IBD"/>
                         <outlet property="maximumReps" destination="zNG-X0-qOQ" id="kR3-cq-IE1"/>
                         <outlet property="minimumReps" destination="VDn-IO-qwX" id="Gan-D0-nHE"/>
+                        <outlet property="toolbarOutlet" destination="Glx-ix-q2M" id="4MS-Hg-U8d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXO-ft-5Kp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Glx-ix-q2M">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="XwC-H9-gwT"/>
+                        <barButtonItem systemItem="done" id="1Ba-JP-enG">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="DeI-Rw-nqf" id="68b-FY-o0F"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="2646" y="-377"/>
         </scene>
@@ -1364,7 +1390,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -1412,11 +1438,24 @@
                         <outlet property="previousRoundsLabel" destination="oWH-zu-OXZ" id="iCk-zk-hC9"/>
                         <outlet property="previousTimeLabel" destination="VUm-7k-iG8" id="BqD-O4-g1V"/>
                         <outlet property="timeInputOutlet" destination="T42-UT-9tC" id="Ufr-x7-nQC"/>
+                        <outlet property="toolbarOutlet" destination="THd-sO-gqz" id="eQy-lL-LgZ"/>
                         <outlet property="workoutNameLabel" destination="Xo2-hD-fPn" id="P77-Rh-k6i"/>
                         <segue destination="dAS-1m-QVa" kind="show" identifier="goToFavouriteWorkout" id="3Ee-I2-rYc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNh-Ls-wUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="THd-sO-gqz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="hSp-8X-ZF7"/>
+                        <barButtonItem systemItem="done" id="RCK-vT-WgK">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="UEs-DS-dr4" id="Vfz-OK-MvU"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="-1256" y="755"/>
         </scene>
@@ -1537,7 +1576,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Ewi-xl-6sC"/>
         <segue reference="ADT-ng-dZD"/>
-        <segue reference="3Ee-I2-rYc"/>
+        <segue reference="pty-r3-iqh"/>
         <segue reference="h4y-y4-kAE"/>
         <segue reference="9IO-bs-1ev"/>
     </inferredMetricsTieBreakers>

@@ -14,19 +14,14 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
     //MARK: Outlets
     
     @IBOutlet weak var exerciseName: UITextField!
-    
     @IBOutlet weak var minimumReps: UITextField!
-    
     @IBOutlet weak var maximumReps: UITextField!
-    
     @IBOutlet weak var exerciseType: UISegmentedControl!
-    
     @IBOutlet weak var addExerciseButtonOutlet: UIButton!
-    
     @IBOutlet weak var addExerciseInfoLabel: UILabel!
+    @IBOutlet var toolbarOutlet: UIToolbar!
     
     
-
     //MARK: Delegates
     
     // Add delegates to allow input validation methods to work
@@ -128,6 +123,20 @@ class AddExerciseViewController: UIViewController, UITextFieldDelegate {
         } else {
             addExerciseButtonOutlet.isEnabled = false
         }
+        return true
+    }
+    
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        
+        self.view.endEditing(true)
+        
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        minimumReps.inputAccessoryView = toolbarOutlet
+        maximumReps.inputAccessoryView = toolbarOutlet
+        
         return true
     }
 

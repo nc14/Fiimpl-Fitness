@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavouriteDetailViewController: UIViewController {
+class FavouriteDetailViewController: UIViewController, UITextFieldDelegate {
 
     var favouriteWorkoutPassed = WorkoutSessionObject()
     var favouriteObjectPassed = FavouriteObject()
@@ -18,7 +18,7 @@ class FavouriteDetailViewController: UIViewController {
     @IBOutlet weak var previousTimeLabel: UILabel!
     @IBOutlet weak var goButtonOutlet: UIButton!
     @IBOutlet weak var timeInputOutlet: UITextField!
-    
+    @IBOutlet var toolbarOutlet: UIToolbar!
     
     override func viewDidLoad() {
 
@@ -58,8 +58,23 @@ class FavouriteDetailViewController: UIViewController {
             }
             
         }
-        
-            
-        }
     }
+    
+    //end editing when user hits done
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        
+        self.view.endEditing(true)
+        
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        timeInputOutlet.inputAccessoryView = toolbarOutlet
+        
+        return true
+    }
+    
+    
+    
+}
 

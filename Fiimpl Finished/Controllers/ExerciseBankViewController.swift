@@ -35,6 +35,7 @@ class ExerciseBankViewController: UIViewController, UITableViewDelegate, UITable
 
     
     @IBOutlet weak var exerciseBankTable: UITableView!
+    
 
     // reload table every time the table appears
     override func viewWillAppear(_ animated: Bool) {

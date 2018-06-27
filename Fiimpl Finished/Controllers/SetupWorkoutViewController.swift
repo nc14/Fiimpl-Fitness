@@ -16,6 +16,9 @@ class SetupWorkoutViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var timeInputField: UITextField!
     @IBOutlet weak var workoutTypeControl: UISegmentedControl!
     @IBOutlet weak var goButtonOutlet: UIButton!
+    @IBOutlet var toolbarOutlet: UIToolbar!
+    
+    
     
     override func viewDidLoad() {
         
@@ -103,4 +106,20 @@ class SetupWorkoutViewController: UIViewController, UITextFieldDelegate {
      
         return true
     }
+    
+    //setup done button for numbers keypad
+    
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        
+        self.view.endEditing(true)
+        
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        timeInputField.inputAccessoryView = toolbarOutlet
+        
+        return true
+    }
+    
 }
