@@ -881,149 +881,149 @@
                                 <attributedString key="attributedText">
                                     <fragment content="What is Fiimpl?  ">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Fiimpl's goal is to be the simplest HIIT and fitness training app.  It allows you to build your own exercise bank and then generate random, time based workouts.  You can also store your favourites and try beat your scores!  </string>
+                                        <string key="content"> Fiimpl's goal is to be the simplest HII, WOD and general fitness training app.  It allows you to build your own exercise bank and then generate random, time based workouts.  You can also store your favourites and try beat your last score.  </string>
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="What do I put in my exercise bank? ">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Any exercises you want!  We know everyone is different, has different equipment and space available and like to do different things.  You can add the 'minimum' and 'maximum' rep range for each exercise This means you can get creative, you can do simple things like "Squats" but you can also do things like "500m row, 1 min rest" with a max reps of 5 for example, or a '2 mile run' with a max reps of 1 - experiment to make some amazing workouts!  </string>
+                                        <mutableString key="content"> Any exercises you want!  We've added some to get you going but we know everyone is different, has different equipment and space available and like to do different things.  You can add the 'minimum' and 'maximum' rep range for each exercise This means you can get creative, you can do simple things like "Squats" but you can also do things like "500m row, 1 min rest" with a max reps of 5 for example, or a '2 mile run' with a max reps of 1 - experiment to make some amazing workouts!  </mutableString>
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="What are favourites?">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">  If you really enjoyed the workout you've just done, you can save it as a favourite in the workout summary page.  This will store your history so you can see how you performed last time and try beat it!  Go to the favourites screen to view your workouts, tap on a workout to see the exercises involved and just hit Go to set up a session.  </string>
+                                        <mutableString key="content">  If you really enjoyed the workout you've just done, you can save it as a favourite in the workout summary page.  This will store your history so you can see how you performed last time and try beat it!  Go to the favourites screen to view your workouts, tap on a workout to see the exercises involved and just hit Go to set up a session.  </mutableString>
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="What are streaks? ">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Streaks are a way to keep you motivated!  Build up streaks by completing workouts but if a full day passes without you completing a workout, you'll lose it!  We'll keep a record of your best streak so you can keep trying to beat it!  </string>
+                                        <mutableString key="content"> Streaks are a way to keep you motivated.  Build up streaks by completing workouts but if a full day passes without you completing a workout, you'll lose it!  We'll keep a record of your best streak so you can keep trying to beat it.  Remember, consistency is king!  </mutableString>
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="What is &quot;Keep Streak&quot;?">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">  No-one wants to do a HIIT workout every day.  What about going running, playing football etc!  If you've done another type of workout - just hit 'keep streak' to keep it alive.  Remember you're only cheating yourself!  </string>
+                                        <mutableString key="content">  No-one wants to do a HIIT workout every day (okay maybe the Crossfit guys...).  What about going running, playing football or dancing.  If you've done another type of workout that day - just hit 'Keep Streak' to keep it alive.  Remember you're only cheating yourself!  </mutableString>
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="What's the notebook for?">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">  Notebook is for keeping your own personal records for non Fiimpl workouts.  It's so you can keep everything in one place.  For example, you might want to add "5 mile route round home - 32 mins PB" or "500m row PB = 1 min, 42" - use it however you want!  </string>
+                                        <mutableString key="content">  Notebook is for keeping your own personal records for non Fiimpl workouts.  It's so you can keep everything in one place.  For example, you might want to add "5 mile route round home - 32 mins PB" or "500m row PB = 1 min, 42" - use it however you want to store your own workout and fitness notes.  </mutableString>
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="I'm moving device - can I keep my Fiimpl data?">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">    We don't have this functionality right now but let us know if it's something you'd like to see.  If we do, we'll try find a way to do it so you don't have to create yet another account!  </string>
+                                        <string key="content">    We don't have this functionality right now but let us know if it's something you'd like to see.  If we do, we'll try find a way to do it so you don't have to create yet another account log in.  </string>
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Free? No ads? What gives?">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">  Fiimpl started life as a fun side project to learn to code - we're delighted to release it to the app store completely free and without ads.  We're not planning to charge or advertise within Fiimpl.    </string>
+                                        <string key="content">  Fiimpl has been a fun project whilst I've been learning to code following a course on Udemy (the Angela Yu one is great) on evenings and weekends. There's no plans to charge or advertise within Fiimpl.    </string>
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="How can I give feedback - I want a new feature? ">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Feel free to ping us a mail at fiimplfitness@gmail.com - we'd love to hear from you!  We're a part time development team in and around our real jobs but we'll do our best to keep improving Fiimpl!  </string>
+                                        <string key="content"> Feel free to ping a mail to fiimplfitness@gmail.com - it would be great to hear from you!  Development fits in around real work hopefully Fiimpl will keep improving!   </string>
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Can I leave a review?">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="  Yes please!  We love to hear what you think - please visit our app store page and rate away!">
+                                    <fragment content="  Yes please!  Rate Fiimpl on the app store (good or bad) - it would be great to hear what you think!">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="Avenir-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1076,7 +1076,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -1093,7 +1093,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="319" height="72.333333333333329"/>
                                         <segments>
                                             <segment title="1 - 3"/>
-                                            <segment title="3 - 6"/>
+                                            <segment title="4 - 6"/>
                                         </segments>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
@@ -1200,7 +1200,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-Ze-Imp" userLabel="repsStack">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-Ze-Imp" userLabel="repsStack">
                                 <rect key="frame" x="28" y="318" width="319" height="71"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Min. reps" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="VDn-IO-qwX">

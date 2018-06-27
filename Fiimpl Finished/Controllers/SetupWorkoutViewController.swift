@@ -65,7 +65,7 @@ class SetupWorkoutViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func goButtonTapped(_ sender: Any) {
         
-        if workoutTypeControl.titleForSegment(at: workoutTypeControl.selectedSegmentIndex) == "3 - 6" {
+        if workoutTypeControl.titleForSegment(at: workoutTypeControl.selectedSegmentIndex) == "4 - 6" {
             standardWorkout()
         }
         

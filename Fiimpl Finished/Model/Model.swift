@@ -122,7 +122,7 @@ class WorkoutExercise: Object {
     
     static var standardWorkout: WorkoutGenerator {
         return WorkoutGenerator(
-            minCount: 3,
+            minCount: 4,
             maxCount: 6
         )
         
