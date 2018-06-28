@@ -29,6 +29,8 @@ class WorkoutSummaryViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         
+        UIApplication.shared.isIdleTimerDisabled = false
+        
         if isFavourite == true {
             makeFavouriteOutlet.setTitle("Great Work!", for: .normal)
             makeFavouriteOutlet.isEnabled = false
