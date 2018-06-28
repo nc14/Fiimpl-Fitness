@@ -21,6 +21,8 @@ class FavouriteDetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var toolbarOutlet: UIToolbar!
     
     override func viewDidLoad() {
+        
+        timeInputOutlet.delegate = self
 
         let lastRecord = favouriteObjectPassed.workoutHistory.first
         workoutNameLabel.text = favouriteObjectPassed.favouriteWorkoutName
@@ -58,6 +60,7 @@ class FavouriteDetailViewController: UIViewController, UITextFieldDelegate {
             }
             
         }
+        
     }
     
     //end editing when user hits done

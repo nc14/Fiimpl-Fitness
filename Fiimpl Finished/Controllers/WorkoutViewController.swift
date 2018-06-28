@@ -86,11 +86,18 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func swapButtonTapped(cell: WorkoutCell) {
+        
+        let myIndexPath = workoutTableView.indexPath(for: cell)
+        
         let realmExercisePool = realm.objects(ExerciseGeneratorObject.self)
         let index = Int(arc4random_uniform(UInt32(realmExercisePool.count)))
         let newExercise = realmExercisePool[index].generateExercise()
+        
+        selectedWorkoutExerciseArray[(myIndexPath?.row)!] = newExercise
+        
         cell.exerciseName.text = newExercise.name
         cell.repsNumber.text = String(newExercise.reps)
+      
     }
 
 //MARK: Timer functions
