@@ -50,6 +50,8 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         
+        UIApplication.shared.isIdleTimerDisabled = true
+        
         originalTime = selectedWorkoutTime
         selectedWorkoutTime = selectedWorkoutTime * 60
         timeLabel.text = timeString(time: TimeInterval(selectedWorkoutTime))
