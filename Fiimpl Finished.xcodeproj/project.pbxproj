@@ -16,6 +16,7 @@
 		D965F7D920C9BF7C0063A09A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D965F7D820C9BF7C0063A09A /* Assets.xcassets */; };
 		D965F7DC20C9BF7C0063A09A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965F7DA20C9BF7C0063A09A /* LaunchScreen.storyboard */; };
 		D985D6D020CE9F9D00C74D7F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985D6CF20CE9F9D00C74D7F /* Model.swift */; };
+		D9883EF220E7F61500CA551E /* FAQSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9883EF120E7F61500CA551E /* FAQSViewController.swift */; };
 		D9AE060720CF14F800756881 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE060620CF14F800756881 /* HomeViewController.swift */; };
 		D9B8FF6B20D1602A009A69FE /* AddExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8FF6A20D1602A009A69FE /* AddExerciseViewController.swift */; };
 		D9E5355B20E2CE39001EA642 /* fiimpl-compacted.realm in Resources */ = {isa = PBXBuildFile; fileRef = D9E5355A20E2CE39001EA642 /* fiimpl-compacted.realm */; };
@@ -40,6 +41,7 @@
 		D965F7DB20C9BF7C0063A09A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D965F7DD20C9BF7C0063A09A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D985D6CF20CE9F9D00C74D7F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D9883EF120E7F61500CA551E /* FAQSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQSViewController.swift; sourceTree = "<group>"; };
 		D9AE060620CF14F800756881 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D9B8FF6A20D1602A009A69FE /* AddExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseViewController.swift; sourceTree = "<group>"; };
 		D9E5355A20E2CE39001EA642 /* fiimpl-compacted.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fiimpl-compacted.realm"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D943730220D4185900BCEA09 /* FavouriteDetailViewController.swift */,
 				D9F0013620D6B13F00368653 /* NotesViewController.swift */,
 				D9F0013A20D80FD300368653 /* FavouriteExerciseDetailViewController.swift */,
+				D9883EF120E7F61500CA551E /* FAQSViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				D943730320D4185900BCEA09 /* FavouriteDetailViewController.swift in Sources */,
 				D9EA6E8820D2692900EBEBCE /* SetupWorkoutViewController.swift in Sources */,
 				D9B8FF6B20D1602A009A69FE /* AddExerciseViewController.swift in Sources */,
+				D9883EF220E7F61500CA551E /* FAQSViewController.swift in Sources */,
 				D965F7D220C9BF7C0063A09A /* AppDelegate.swift in Sources */,
 				D9AE060720CF14F800756881 /* HomeViewController.swift in Sources */,
 			);

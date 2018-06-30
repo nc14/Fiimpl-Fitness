@@ -864,10 +864,10 @@
             </objects>
             <point key="canvasLocation" x="1595.625" y="577.81690140845069"/>
         </scene>
-        <!--FAQs-->
+        <!--FAQ View Controller-->
         <scene sceneID="DkD-qS-xhO">
             <objects>
-                <viewController id="cer-mB-w5q" sceneMemberID="viewController">
+                <viewController title="FAQ View Controller" id="cer-mB-w5q" customClass="FAQSViewController" customModule="Fiimpl_Finished" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zb0-ZY-Oyp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1046,6 +1046,9 @@
                         <viewLayoutGuide key="safeArea" id="Fjw-Sf-0vS"/>
                     </view>
                     <navigationItem key="navigationItem" title="FAQs" id="MaF-Db-2G0"/>
+                    <connections>
+                        <outlet property="textFieldOutlet" destination="mej-hB-zA8" id="5Rh-9L-oS9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMB-No-NHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1065,14 +1068,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5XW-wR-Fxo" userLabel="Name stack">
                                 <rect key="frame" x="28" y="74" width="319" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long do you want to train for?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbB-0W-GOK">
-                                        <rect key="frame" x="0.0" y="0.0" width="319" height="34"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout time (mins)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbB-0W-GOK">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="38"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Workout time" textAlignment="center" minimumFontSize="17" background="inputBox" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-LH-l3h">
-                                        <rect key="frame" x="0.0" y="44" width="319" height="56"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time (mins)" textAlignment="center" minimumFontSize="17" background="inputBox" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-LH-l3h">
+                                        <rect key="frame" x="0.0" y="48" width="319" height="52"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
@@ -1080,17 +1083,17 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many exercises?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nje-6U-We2">
-                                <rect key="frame" x="28" y="224" width="319" height="19.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. exercises" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nje-6U-We2">
+                                <rect key="frame" x="28" y="224" width="319" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z7e-fO-mFp" userLabel="repsStack">
-                                <rect key="frame" x="28" y="253.5" width="319" height="56.5"/>
+                                <rect key="frame" x="28" y="257.5" width="319" height="52.5"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="va0-S7-rRe">
-                                        <rect key="frame" x="0.0" y="0.0" width="319" height="57.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="53.5"/>
                                         <segments>
                                             <segment title="1 - 3"/>
                                             <segment title="4 - 6"/>
@@ -1210,7 +1213,7 @@
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Max. exercises" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-X0-qOQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Max reps" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-X0-qOQ">
                                         <rect key="frame" x="164.5" y="0.0" width="154.5" height="56"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1376,16 +1379,16 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set time for workout" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgs-U9-U4F">
-                                <rect key="frame" x="28" y="309" width="319" height="16.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout time (mins)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgs-U9-U4F">
+                                <rect key="frame" x="28" y="309" width="319" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZUG-zc-YJ4" userLabel="timeStack">
-                                <rect key="frame" x="107.5" y="335.5" width="160" height="67"/>
+                                <rect key="frame" x="107.5" y="340.5" width="160" height="67"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Workout Time" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="T42-UT-9tC" userLabel="timeInput">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time (mins)" textAlignment="center" minimumFontSize="17" background="half blank input" translatesAutoresizingMaskIntoConstraints="NO" id="T42-UT-9tC" userLabel="timeInput">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="67"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1398,7 +1401,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad1-4X-Z9e">
-                                <rect key="frame" x="28" y="427.5" width="319" height="50"/>
+                                <rect key="frame" x="28" y="432.5" width="319" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Go">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
