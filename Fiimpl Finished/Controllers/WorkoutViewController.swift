@@ -253,7 +253,7 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
             streakObject?.currentStreak = newStreak
         }
         
-        if (daysBetween.day) == 0 {
+        if (daysBetween.day!) <= 1 {
             try! realm.write {
                 streakObject?.currentStreak = newStreak
                 streakObject?.lastWorkoutDate = Date()

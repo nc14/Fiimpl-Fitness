@@ -102,7 +102,7 @@ class HomeViewController: UIViewController {
         
         let daysBetween = calendar.dateComponents([.day], from: date1, to: date2)
         
-        if (daysBetween.day) != 0 {
+        if (daysBetween.day)! > 1 {
             try! realm.write {
                 streakObject?.currentStreak = 0
             }
