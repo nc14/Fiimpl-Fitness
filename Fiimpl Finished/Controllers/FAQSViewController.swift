@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FAQSViewController: UIViewController {
 
     @IBOutlet weak var textFieldOutlet: UITextView!
