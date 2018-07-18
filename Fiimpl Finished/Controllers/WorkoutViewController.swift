@@ -210,15 +210,26 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func quitButtonTapped(_ sender: Any) {
         
+        workoutTimerObject.invalidate()
+        isTimerRunning = false
+        
         let alert = UIAlertController(title: "Quit workout?", message: "Are you sure you want to quit?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Yes, quit", style: .default, handler: { action in self.performSegue(withIdentifier: "quitWorkout", sender: self) }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in self.cancelButtonTimerActions()}))
         
         self.present(alert, animated: true)
             
         }
+    
+    //action to stop the timer from running whilst the quit button alert controller is showing
+    func cancelButtonTimerActions() {
+        
+        runTimer()
+        isTimerRunning = true
+        
+    }
     
     
     //update Streak function
@@ -230,12 +241,12 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         let currentStreak = streakObject?.currentStreak ?? 0
         let bestStreak = streakObject?.longestStreak ?? 0
         let newStreak = (currentStreak) + 1
-        let lastDate = streakObject?.lastWorkoutDate ?? Date()
+//        let lastDate = streakObject?.lastWorkoutDate ?? Date()
         // Replace the hour (time) of both dates with 00:00
-        let date1 = calendar.startOfDay(for: lastDate)
+//        let date1 = calendar.startOfDay(for: lastDate)
         let date2 = calendar.startOfDay(for: Date())
-        
-        let daysBetween = calendar.dateComponents([.day], from: date1, to: date2)
+//
+//        let daysBetween = calendar.dateComponents([.day], from: date1, to: date2)
 
         if firstTime == true {
             let firstStreakObject = StreakObject()
@@ -251,19 +262,21 @@ class WorkoutViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         try! realm.write {
             streakObject?.currentStreak = newStreak
+            streakObject?.lastWorkoutDate = Date()
         }
         
-        if (daysBetween.day!) <= 1 {
-            try! realm.write {
-                streakObject?.currentStreak = newStreak
-                streakObject?.lastWorkoutDate = Date()
-            }
-        } else {
-            try! realm.write {
-                streakObject?.currentStreak = 0
-                streakObject?.lastWorkoutDate = Date()
-            }
-        }
+//        if (daysBetween.day!) <= 1 {
+//            try! realm.write {
+//                streakObject?.currentStreak = newStreak
+//                streakObject?.lastWorkoutDate = Date()
+//            }
+//        } else {
+//            try! realm.write {
+//                streakObject?.currentStreak = 0
+//                streakObject?.lastWorkoutDate = Date()
+//            }
+//        }
+       
         if newStreak > bestStreak {
             try! realm.write {
                 streakObject?.longestStreak = newStreak
